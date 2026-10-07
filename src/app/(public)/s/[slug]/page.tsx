@@ -15,17 +15,7 @@ import { ShareButton } from "./ShareButton";
 import s from "./shop.module.css";
 
 /** Page strings (to be merged into lib/copy.ts). Status words stay Latin. */
-const T = {
-  address: "მისამართი",
-  available: "ხელმისაწვდომი",
-  sold: "გაყიდული",
-  share: "გაზიარება",
-  copied: "ბმული დაკოპირდა",
-  noneAvailable: "ხელმისაწვდომი ნივთი არ არის",
-  nextDrop: "NEXT DROP SOON",
-  allShops: "ყველა მაღაზია →",
-  instagram: "Instagram",
-};
+const T = t.shopPage;
 
 /** First letter for the avatar fallback. Latin is uppercased; Georgian stays Mkhedruli (no Mtavruli caps). */
 function initial(name: string) {

@@ -1,49 +1,7 @@
-/** Shop dashboard strings (Georgian only, per handoff README). To be merged into lib/copy.ts. */
-export const T = {
-  home: "DEADSTOCK — მთავარი",
-  shopBadge: "SHOP",
-  shopBadgeDesk: "SHOP PANEL",
-  logout: "გასვლა",
-  live: "LIVE",
-  paused: "PAUSED",
-  syncLabel: "SYNC",
-  syncNow: "სინქრონიზაცია",
-  syncRunning: "სინქი…",
-  syncNever: "—",
-  syncFailed: "ბოლო სინქი ვერ მოხერხდა",
-  syncMetaTitle: "ბოლო სინქი · ნივთები",
-  auto: "AUTO",
-  autoTitle: "ავტო-გამოქვეყნება: ახალი პოსტი პირდაპირ საიტზე",
-  copyLink: "ბმულის კოპირება",
-  copied: "დაკოპირდა",
-  pendingH: "ახალი",
-  allH: "ყველა",
-  allGood: "ყველაფერი ✓",
-  approve: "დადასტურება",
-  reject: "უარყოფა",
-  markSold: "გაყიდულად მონიშვნა",
-  untitled: "უსათაურო",
-  noPrice: "ფასი —",
-  size: "ზომა",
-  colItem: "ნივთი",
-  edit: "რედაქტირება",
-  back: "უკან",
-  save: "SAVE",
-  viewOnSite: "ნახვა საიტზე",
-  igPost: "IG პოსტი",
-  status: "სტატუსი",
-  available: "ხელმისაწვდომი",
-  reserved: "დაჯავშნილი",
-  sold: "გაყიდული",
-  price: "ფასი",
-  photos: "ფოტოები",
-  details: "დეტალები",
-  customSize: "სხვა ზომა",
-  minutes: "წთ",
-  hours: "სთ",
-  days: "დღე",
-  now: "ახლა",
-} as const;
+import { t } from "@/lib/copy";
+
+/** Shop dashboard strings live in lib/copy.ts (t.dash; Georgian only, per handoff README). */
+export const T = t.dash;
 
 /** "12 წთ" / "3 სთ" / "2 დღე" since `d`. */
 export function ago(d: Date, now = Date.now()) {

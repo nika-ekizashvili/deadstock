@@ -7,11 +7,11 @@ import type { CardItem } from "@/lib/queries";
 /** Below this many items the grid closes with the "that's all. yet." tile (Cards → 09 FEW ITEMS). */
 const FEW = 12;
 
-export function ListingGrid({ items, closeWithSell = false }: { items: CardItem[]; closeWithSell?: boolean }) {
+export function ListingGrid({ items, closeWithSell = false, highlight }: { items: CardItem[]; closeWithSell?: boolean; highlight?: string }) {
   return (
     <div className="ds-grid">
       {items.map((it, i) => (
-        <ListingCard key={it.id} item={it} priority={i < 4} />
+        <ListingCard key={it.id} item={it} priority={i < 4} highlight={highlight} />
       ))}
       {closeWithSell && items.length > 0 && items.length < FEW && (
         <div className="ds-thats-all">

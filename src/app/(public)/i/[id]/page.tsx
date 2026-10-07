@@ -15,24 +15,7 @@ import { SaveHeart, StickyBar } from "./ItemClient";
 import s from "./item.module.css";
 
 /** Page strings (to be merged into lib/copy.ts). */
-const T = {
-  price: "ფასი",
-  posted: "დაიდო",
-  size: "ზომა",
-  condition: "მდგომარეობა",
-  brand: "ბრენდი",
-  category: "კატეგორია",
-  originalPost: "ორიგინალი პოსტი",
-  moreItems: "სხვა ნივთები →",
-  caption: "პოსტის ტექსტი",
-  videoOnIg: "ვიდეო Instagram-ზე",
-  // relative "posted" time
-  justNow: "ახლა",
-  min: "წთ",
-  hour: "სთ",
-  yesterday: "გუშინ",
-  day: "დ",
-};
+const T = t.itemPage;
 
 const ICON_SPARK = "M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z";
 const ICON_BACK = "M19 12H5M12 19l-7-7 7-7";

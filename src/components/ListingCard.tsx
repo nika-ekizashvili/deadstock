@@ -3,10 +3,20 @@ import { Icon, PATHS, PlayIcon } from "@/components/icons";
 import { SaveButton } from "@/components/SaveButton";
 import { priceText } from "@/lib/catalog";
 import { t } from "@/lib/copy";
+import { highlight as split } from "@/lib/highlight";
 import type { CardItem } from "@/lib/queries";
 
+type Props = {
+  item: CardItem;
+  priority?: boolean;
+  /** Search query: matching words in the title turn lime (handoff: Search-375 / Search-1440). */
+  highlight?: string;
+  /** Keep the heart on sold items (the Saved page must be able to remove them). */
+  keepSave?: boolean;
+};
+
 /** Listing card (handoff: Cards → 08 LISTING CARD). No text on the photo except the price tag. */
-export function ListingCard({ item, priority = false }: { item: CardItem; priority?: boolean }) {
+export function ListingCard({ item, priority = false, highlight, keepSave = false }: Props) {
   const sold = item.status === "sold";
   return (
     <div className="ds-card-wrap">
@@ -35,7 +45,11 @@ export function ListingCard({ item, priority = false }: { item: CardItem; priori
           </span>
         </div>
         <div className="ds-card__body">
-          <span className={`ds-card__title${item.titleFallback ? " ds-card__title--fallback" : ""}`}>{item.title}</span>
+          <span className={`ds-card__title${item.titleFallback ? " ds-card__title--fallback" : ""}`}>
+            {split(item.title, highlight).map((seg, i) =>
+              seg.hit ? <mark key={i} className="ds-hit">{seg.text}</mark> : seg.text,
+            )}
+          </span>
           <span className="ds-card__meta">
             {item.size && <span className="ds-size">{item.size}</span>}
             <span
@@ -50,7 +64,7 @@ export function ListingCard({ item, priority = false }: { item: CardItem; priori
           </span>
         </div>
       </Link>
-      {!sold && <SaveButton id={item.id} />}
+      {(!sold || keepSave) && <SaveButton id={item.id} />}
     </div>
   );
 }

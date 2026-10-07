@@ -4,22 +4,12 @@ import { redirect } from "next/navigation";
 import { Icon } from "@/components/icons";
 import { getSession } from "@/lib/session";
 import s from "./sell.module.css";
+import { t } from "@/lib/copy";
 
 export const metadata: Metadata = { title: "DEADSTOCK — SELL" };
 
 /** Shop sign-in strings (Georgian; shop side is ka-only). To be merged into lib/copy.ts. */
-const T = {
-  home: "DEADSTOCK — მთავარი",
-  kicker: "SELL ON DEADSTOCK",
-  h1a: "Instagram დააკავშირე.",
-  h1b: "დანარჩენს ჩვენ ვიზამთ.",
-  onlyA: "მხოლოდ ",
-  onlyB: " ანგარიში",
-  connect: "დაკავშირება",
-  back: "← უკან",
-  errPersonal: "Business / Creator?",
-  errFailed: "Instagram-თან დაკავშირება ვერ მოხერხდა. სცადე თავიდან.",
-};
+const T = t.sellPage;
 
 const INFO = "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM12 11v5M12 8h.01";
 const ALERT = "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM12 7v6M12 16.5h.01";

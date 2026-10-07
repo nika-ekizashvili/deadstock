@@ -9,10 +9,9 @@ import { getCards } from "@/lib/queries";
 import { publicUrl } from "@/lib/storage";
 import { ShopMap, type MapShop } from "./ShopMap";
 import s from "./map.module.css";
+import { t } from "@/lib/copy";
 
-const T = {
-  title: "თრიფთ-კრაული — DEADSTOCK.ge",
-};
+const T = t.mapPage;
 
 export const metadata: Metadata = { title: T.title };
 

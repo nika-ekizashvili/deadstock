@@ -5,17 +5,9 @@ import { useState } from "react";
 import { Icon, PATHS } from "@/components/icons";
 import { GoogleLayer, MAPS_KEY } from "./GoogleLayer";
 import s from "./map.module.css";
+import { t } from "@/lib/copy";
 
-const T = {
-  title: "თრიფთ-კრაული",
-  back: "უკან",
-  shops: "მაღაზიები",
-  map: "რუკა",
-  shop: "მაღაზია",
-  route: "მარშრუტი",
-  items: "ITEMS",
-  empty: "რუკაზე ჯერ მაღაზიები არ არის.",
-};
+const T = t.mapScreen;
 
 export type MapShop = {
   id: string;

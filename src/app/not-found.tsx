@@ -5,10 +5,7 @@ import { t } from "@/lib/copy";
 import s from "./not-found.module.css";
 
 /** Page strings (to be merged into lib/copy.ts). */
-const T = {
-  title: "აქ არაფერია",
-  home: "← მთავარი",
-};
+const T = t.notFound;
 
 export const metadata: Metadata = { title: `404 — ${T.title}` };
 

@@ -12,16 +12,7 @@ import { t } from "@/lib/copy";
 import { getCards } from "@/lib/queries";
 import s from "./search.module.css";
 
-const T = {
-  title: "ძებნა · DEADSTOCK.ge",
-  back: "უკან",
-  filters: "ფილტრები",
-  results: "შედეგები",
-  price: "ფასი",
-  items: "ITEMS",
-  sizeLegend: "SIZE",
-  priceLegend: "PRICE",
-};
+const T = t.searchPage;
 
 /** Icons from Search-375 (size + price chips). */
 const SIZE_ICON = "M4 7h16M4 7v10M20 7v10M8 7v3M12 7v4M16 7v3";
@@ -165,7 +156,7 @@ export default async function Search({ searchParams }: PageProps<"/search">) {
             </span>
           </div>
           {items.length ? (
-            <ListingGrid items={items} />
+            <ListingGrid items={items} highlight={q} />
           ) : (
             <NoResults query={q} clearHref={filtered ? clearFilters : "/"} />
           )}

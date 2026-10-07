@@ -5,21 +5,12 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { Icon, PATHS } from "@/components/icons";
 import { ListingCard } from "@/components/ListingCard";
 import { GridSkeleton } from "@/components/ListingGrid";
-import { SaveButton } from "@/components/SaveButton";
 import type { CardItem } from "@/lib/queries";
 import { useSavedIds } from "@/lib/saved";
 import s from "./saved.module.css";
+import { t } from "@/lib/copy";
 
-const T = {
-  title: "შენახული",
-  filter: "ფილტრი",
-  all: "ყველა",
-  available: "ხელმისაწვდომი",
-  empty: "ჯერ ცარიელია.",
-  browse: "BROWSE",
-  failed: "ვერ ჩაიტვირთა.",
-  retry: "თავიდან ცდა",
-};
+const T = t.savedPage;
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 /** The API takes at most 100 ids per request; larger lists load in batches. */
@@ -85,9 +76,7 @@ export function SavedView() {
       <div className={`ds-grid ${s.grid} ${s.pad}`}>
         {visible.map((it, i) => (
           <div key={it.id} className={s.cell}>
-            <ListingCard item={it} priority={i < 4} />
-            {/* ListingCard drops the heart on sold items; here it must stay so they can be removed. */}
-            {it.status === "sold" && <SaveButton id={it.id} />}
+            <ListingCard item={it} priority={i < 4} keepSave />
           </div>
         ))}
       </div>
