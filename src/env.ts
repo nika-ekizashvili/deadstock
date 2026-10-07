@@ -13,7 +13,14 @@ const schema = z.object({
   IG_APP_SECRET: z.string().default(""),
   IG_GRAPH_VERSION: z.string().default("v23.0"),
 
-  S3_ENDPOINT: z.string().url(),
+  /** usectl's S3 addon sets host:port with no scheme (S3_USE_SSL says which), MinIO a full URL. */
+  S3_ENDPOINT: z.preprocess(
+    (v) =>
+      typeof v === "string" && !v.includes("://")
+        ? `${process.env.S3_USE_SSL === "true" ? "https" : "http"}://${v}`
+        : v,
+    z.string().url(),
+  ),
   S3_REGION: z.string().default("us-east-1"),
   S3_BUCKET: z.string().default("deadstock"),
   S3_ACCESS_KEY: z.string(),
