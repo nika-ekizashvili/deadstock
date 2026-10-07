@@ -64,6 +64,16 @@ Search uses a `search_text` column with Georgian→Latin transliteration ("kaba"
 
 ## Deploy
 
+**usectl** — machine `private-itswhatever`, group `deadstock`, all three pods build this repo's Dockerfile from `demo-mvp`:
+
+| Pod | Kind | Command |
+| --- | --- | --- |
+| `deadstock-migrate` | release (Job before rollout, once per commit) | `drizzle-kit migrate` |
+| `deadstock-web` | web → https://deadstock.usectl.com | image default (`node server.js`) |
+| `deadstock-worker` | worker (internal) | `tsx src/worker/index.ts` |
+
+Addons `database/primary` and `s3/primary` (managed, in the group) inject `DATABASE_URL` and `S3_*`. Pod env: `SESSION_SECRET`, `TOKEN_ENCRYPTION_KEY` (protected, same on all three), `ROOT_DOMAIN`, `APP_URL`. usectl runs a pod's `--command` as one shell string and ignores `--arg`, so put the whole command line in `--command`.
+
 `docker compose --profile app up -d --build` runs web + worker from one image. In production point `S3_*` at real object storage, set `ROOT_DOMAIN=deadstock.ge`, and add a wildcard DNS record + wildcard TLS certificate for `*.deadstock.ge`. Secrets (`SESSION_SECRET`, `TOKEN_ENCRYPTION_KEY`, `IG_APP_SECRET`) belong in Vault.
 
 ## Next up
