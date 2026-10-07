@@ -1,0 +1,1222 @@
+{
+ "v": 3,
+ "attachments": {},
+ "boards": {
+  "Alerts-375.dc.html": {
+   "h": 1300,
+   "is_interactive": true,
+   "title": "Drop alerts & size profile · 375",
+   "w": 375,
+   "x": 1520,
+   "y": 20900
+  },
+  "Cards.dc.html": {
+   "h": 1700,
+   "title": "Listing card & states",
+   "w": 1440,
+   "x": 1520,
+   "y": 0
+  },
+  "Dash-1440.dc.html": {
+   "expand": "fill",
+   "h": 1800,
+   "is_interactive": true,
+   "title": "Shop dashboard · 1440",
+   "w": 1440,
+   "x": 455,
+   "y": 14100
+  },
+  "Dash-375.dc.html": {
+   "h": 2300,
+   "is_interactive": true,
+   "title": "Shop dashboard · 375",
+   "w": 375,
+   "x": 0,
+   "y": 14100
+  },
+  "Dash-Stats-1440.dc.html": {
+   "expand": "fill",
+   "h": 1300,
+   "is_interactive": true,
+   "title": "Dashboard · stats & caption check · 1440",
+   "w": 1440,
+   "x": 440,
+   "y": 22800
+  },
+  "DashStates.dc.html": {
+   "h": 1700,
+   "title": "Dashboard states & components",
+   "w": 1440,
+   "x": 1975,
+   "y": 14100
+  },
+  "Drops-375.dc.html": {
+   "h": 1300,
+   "is_interactive": true,
+   "title": "Drop calendar · 375",
+   "w": 375,
+   "x": 2885,
+   "y": 20900
+  },
+  "Feat-Components.dc.html": {
+   "h": 1500,
+   "is_interactive": true,
+   "title": "New components: save, follow, alerts, drops, badges",
+   "w": 1440,
+   "x": 0,
+   "y": 20900
+  },
+  "Home-1440-EN.dc.html": {
+   "expand": "fill",
+   "h": 2300,
+   "is_interactive": true,
+   "title": "Home feed · English · 1440",
+   "w": 1440,
+   "x": 1520,
+   "y": 18100
+  },
+  "Home-1440-Empty.dc.html": {
+   "expand": "fill",
+   "h": 1500,
+   "is_interactive": true,
+   "title": "Home · no results · 1440",
+   "w": 1440,
+   "x": 1975,
+   "y": 4400
+  },
+  "Home-1440.dc.html": {
+   "expand": "fill",
+   "h": 2300,
+   "is_interactive": true,
+   "title": "Home feed · 1440",
+   "w": 1440,
+   "x": 455,
+   "y": 4400
+  },
+  "Home-375-Early.dc.html": {
+   "h": 1800,
+   "is_interactive": true,
+   "title": "Home · early days · 375",
+   "w": 375,
+   "x": 3950,
+   "y": 4400
+  },
+  "Home-375-Empty.dc.html": {
+   "h": 1600,
+   "is_interactive": true,
+   "title": "Home · no results · 375",
+   "w": 375,
+   "x": 3495,
+   "y": 4400
+  },
+  "Home-375.dc.html": {
+   "h": 2400,
+   "is_interactive": true,
+   "title": "Home feed · 375",
+   "w": 375,
+   "x": 0,
+   "y": 4400
+  },
+  "Item-1440-Sold.dc.html": {
+   "expand": "fill",
+   "h": 1500,
+   "is_interactive": true,
+   "title": "Item · sold · 1440",
+   "w": 1440,
+   "x": 1975,
+   "y": 10500
+  },
+  "Item-1440.dc.html": {
+   "expand": "fill",
+   "h": 1500,
+   "is_interactive": true,
+   "title": "Item · reserved · 1440",
+   "w": 1440,
+   "x": 455,
+   "y": 10500
+  },
+  "Item-375-NoPrice.dc.html": {
+   "h": 1900,
+   "is_interactive": true,
+   "title": "Item · video, no price · 375",
+   "w": 375,
+   "x": 3950,
+   "y": 10500
+  },
+  "Item-375-Sold.dc.html": {
+   "h": 1900,
+   "is_interactive": true,
+   "title": "Item · sold · 375",
+   "w": 375,
+   "x": 3495,
+   "y": 10500
+  },
+  "Item-375-Sticky.dc.html": {
+   "h": 812,
+   "is_interactive": true,
+   "title": "Item · scrolled, sticky DM bar · 375",
+   "w": 375,
+   "x": 4405,
+   "y": 10500
+  },
+  "Item-375.dc.html": {
+   "h": 1900,
+   "is_interactive": true,
+   "title": "Item · available · 375",
+   "w": 375,
+   "x": 0,
+   "y": 10500
+  },
+  "Main.dc.html": {
+   "h": 4000,
+   "title": "Identity & tokens",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "Map-375.dc.html": {
+   "h": 812,
+   "is_interactive": true,
+   "title": "Thrift map · 375",
+   "w": 375,
+   "x": 3340,
+   "y": 20900
+  },
+  "NotFound-1440.dc.html": {
+   "expand": "fill",
+   "h": 900,
+   "is_interactive": true,
+   "title": "Not found · 1440",
+   "w": 1440,
+   "x": 455,
+   "y": 16800
+  },
+  "NotFound-375.dc.html": {
+   "h": 812,
+   "is_interactive": true,
+   "title": "Not found · 375",
+   "w": 375,
+   "x": 0,
+   "y": 16800
+  },
+  "OG-InContext.dc.html": {
+   "h": 812,
+   "title": "Link preview in a chat · 375",
+   "w": 375,
+   "x": 4320,
+   "y": 18100
+  },
+  "OG-Item.dc.html": {
+   "h": 630,
+   "title": "Link preview · item · 1200×630",
+   "w": 1200,
+   "x": 3040,
+   "y": 18100
+  },
+  "OG-Shop.dc.html": {
+   "h": 630,
+   "title": "Link preview · shop · 1200×630",
+   "w": 1200,
+   "x": 3040,
+   "y": 18850
+  },
+  "Post-Top10.dc.html": {
+   "h": 540,
+   "title": "IG post · Top 10 under 50 ₾ · 4:5",
+   "w": 432,
+   "x": 1960,
+   "y": 22800
+  },
+  "Saved-375.dc.html": {
+   "h": 1300,
+   "is_interactive": true,
+   "title": "Saved items · 375",
+   "w": 375,
+   "x": 1975,
+   "y": 20900
+  },
+  "Shop-1440.dc.html": {
+   "expand": "fill",
+   "h": 2200,
+   "is_interactive": true,
+   "title": "Shop page · 1440",
+   "w": 1440,
+   "x": 455,
+   "y": 7400
+  },
+  "Shop-375-Empty.dc.html": {
+   "h": 1400,
+   "is_interactive": true,
+   "title": "Shop · nothing available, no IG avatar · 375",
+   "w": 375,
+   "x": 1975,
+   "y": 7400
+  },
+  "Shop-375.dc.html": {
+   "h": 2650,
+   "is_interactive": true,
+   "title": "Shop page · 375",
+   "w": 375,
+   "x": 0,
+   "y": 7400
+  },
+  "SignIn-1440.dc.html": {
+   "expand": "fill",
+   "h": 900,
+   "is_interactive": true,
+   "title": "Shop sign-in · 1440",
+   "w": 1440,
+   "x": 455,
+   "y": 12800
+  },
+  "SignIn-375.dc.html": {
+   "h": 900,
+   "is_interactive": true,
+   "title": "Shop sign-in · 375 (error state)",
+   "w": 375,
+   "x": 0,
+   "y": 12800
+  },
+  "Story-DropNight.dc.html": {
+   "h": 640,
+   "title": "Story · DEADSTOCK Thursday · 9:16",
+   "w": 360,
+   "x": 2472,
+   "y": 22800
+  },
+  "Story-Item.dc.html": {
+   "h": 640,
+   "title": "Story share sticker · item · 9:16",
+   "w": 360,
+   "x": 3795,
+   "y": 20900
+  },
+  "Story-Stats.dc.html": {
+   "h": 640,
+   "title": "Shop weekly stats story · 9:16",
+   "w": 360,
+   "x": 0,
+   "y": 22800
+  },
+  "Swipe-375.dc.html": {
+   "h": 812,
+   "is_interactive": true,
+   "title": "Swipe mode · 375",
+   "w": 375,
+   "x": 2430,
+   "y": 20900
+  },
+  "Tokens.dc.html": {
+   "h": 2100,
+   "title": "tokens.css — dev handoff",
+   "w": 1440,
+   "x": 0,
+   "y": 18100
+  },
+  "Onb-Import-375.dc.html": {
+   "x": 0,
+   "y": 24700,
+   "w": 375,
+   "h": 1060,
+   "title": "Onboarding 1 · pick posts · 375",
+   "is_interactive": true
+  },
+  "Onb-Review-375.dc.html": {
+   "x": 455,
+   "y": 24700,
+   "w": 375,
+   "h": 1120,
+   "title": "Onboarding 2 · price & size check · 375",
+   "is_interactive": true
+  },
+  "Onb-Shop-375.dc.html": {
+   "x": 910,
+   "y": 24700,
+   "w": 375,
+   "h": 1000,
+   "title": "Onboarding 3 · shop profile · 375",
+   "is_interactive": true
+  },
+  "Onb-Live-375.dc.html": {
+   "x": 1365,
+   "y": 24700,
+   "w": 375,
+   "h": 812,
+   "title": "Onboarding 4 · live · 375",
+   "is_interactive": true
+  },
+  "Search-375.dc.html": {
+   "x": 0,
+   "y": 26420,
+   "w": 375,
+   "h": 1300,
+   "title": "Search results · 375",
+   "is_interactive": true
+  },
+  "Auth-375.dc.html": {
+   "x": 455,
+   "y": 26420,
+   "w": 375,
+   "h": 812,
+   "title": "Shopper log-in sheet · 375",
+   "is_interactive": true
+  },
+  "Dash-Hold-375.dc.html": {
+   "x": 910,
+   "y": 26420,
+   "w": 375,
+   "h": 812,
+   "title": "Shop · put on hold · 375",
+   "is_interactive": true
+  },
+  "Dash-Edit-375.dc.html": {
+   "x": 1365,
+   "y": 26420,
+   "w": 375,
+   "h": 1250,
+   "title": "Shop · edit item · 375",
+   "is_interactive": true
+  },
+  "Notif-375.dc.html": {
+   "x": 0,
+   "y": 28320,
+   "w": 375,
+   "h": 1150,
+   "title": "Notification settings · 375",
+   "is_interactive": true
+  },
+  "Report-375.dc.html": {
+   "x": 455,
+   "y": 28320,
+   "w": 375,
+   "h": 812,
+   "title": "Report a listing · 375",
+   "is_interactive": true
+  },
+  "Dash-Drop-375.dc.html": {
+   "x": 910,
+   "y": 28320,
+   "w": 375,
+   "h": 1000,
+   "title": "Shop · schedule a drop · 375",
+   "is_interactive": true
+  },
+  "Dash-Sync-375.dc.html": {
+   "x": 1365,
+   "y": 28320,
+   "w": 375,
+   "h": 900,
+   "title": "Shop · sync problems · 375",
+   "is_interactive": true
+  },
+  "Empty-States.dc.html": {
+   "x": 1820,
+   "y": 28320,
+   "w": 1357,
+   "h": 860,
+   "title": "Empty states · saved, alerts, drops"
+  },
+  "Dash-Settings-375.dc.html": {
+   "x": 0,
+   "y": 30020,
+   "w": 375,
+   "h": 1350,
+   "title": "Shop · settings · 375",
+   "is_interactive": true
+  },
+  "About-375.dc.html": {
+   "x": 455,
+   "y": 30020,
+   "w": 375,
+   "h": 1150,
+   "title": "About · 375",
+   "is_interactive": true
+  },
+  "Legal-375.dc.html": {
+   "x": 910,
+   "y": 30020,
+   "w": 375,
+   "h": 1000,
+   "title": "Terms & privacy · 375",
+   "is_interactive": true
+  },
+  "Admin-1440.dc.html": {
+   "x": 1365,
+   "y": 30020,
+   "w": 1440,
+   "h": 1100,
+   "title": "Admin · moderation · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Search-1440.dc.html": {
+   "x": 0,
+   "y": 31920,
+   "w": 1440,
+   "h": 1500,
+   "title": "Search results · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Saved-1440.dc.html": {
+   "x": 1520,
+   "y": 31920,
+   "w": 1440,
+   "h": 1300,
+   "title": "Saved · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Drops-1440.dc.html": {
+   "x": 0,
+   "y": 33970,
+   "w": 1440,
+   "h": 1100,
+   "title": "Drop calendar · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Alerts-1440.dc.html": {
+   "x": 1520,
+   "y": 33970,
+   "w": 1440,
+   "h": 1200,
+   "title": "Alerts · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Map-1440.dc.html": {
+   "x": 3040,
+   "y": 33970,
+   "w": 1440,
+   "h": 1100,
+   "title": "Thrift map · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Auth-1440.dc.html": {
+   "x": 0,
+   "y": 35710,
+   "w": 1440,
+   "h": 900,
+   "title": "Shopper log-in · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Report-1440.dc.html": {
+   "x": 1520,
+   "y": 35710,
+   "w": 1440,
+   "h": 900,
+   "title": "Report a listing · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Edit-1440.dc.html": {
+   "x": 3040,
+   "y": 35710,
+   "w": 1440,
+   "h": 1100,
+   "title": "Shop · edit item · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Boost-375.dc.html": {
+   "x": 0,
+   "y": 37360,
+   "w": 375,
+   "h": 900,
+   "title": "Shop · BOOST (paid) · 375",
+   "is_interactive": true
+  },
+  "Dash-Pay-375.dc.html": {
+   "x": 455,
+   "y": 37360,
+   "w": 375,
+   "h": 812,
+   "title": "Shop · pay for BOOST · 375",
+   "is_interactive": true
+  },
+  "Dash-Boost-1440.dc.html": {
+   "x": 910,
+   "y": 37360,
+   "w": 1440,
+   "h": 1000,
+   "title": "Shop · BOOST · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Boosts-375.dc.html": {
+   "x": 2430,
+   "y": 37360,
+   "w": 375,
+   "h": 1000,
+   "title": "Shop · boost history · 375",
+   "is_interactive": true
+  },
+  "Me-375.dc.html": {
+   "x": 2885,
+   "y": 37360,
+   "w": 375,
+   "h": 900,
+   "title": "Shopper profile · 375",
+   "is_interactive": true
+  },
+  "States.dc.html": {
+   "x": 0,
+   "y": 38910,
+   "w": 2187,
+   "h": 860,
+   "title": "Loading, offline & error states"
+  },
+  "Home-375-EN.dc.html": {
+   "x": 0,
+   "y": 40320,
+   "w": 375,
+   "h": 2400,
+   "title": "Home feed · EN · 375",
+   "is_interactive": true
+  },
+  "Search-375-EN.dc.html": {
+   "x": 455,
+   "y": 40320,
+   "w": 375,
+   "h": 1300,
+   "title": "Search results · EN · 375",
+   "is_interactive": true
+  },
+  "Item-375-EN.dc.html": {
+   "x": 910,
+   "y": 40320,
+   "w": 375,
+   "h": 1900,
+   "title": "Item · available · EN · 375",
+   "is_interactive": true
+  },
+  "Shop-375-EN.dc.html": {
+   "x": 1365,
+   "y": 40320,
+   "w": 375,
+   "h": 2650,
+   "title": "Shop page · EN · 375",
+   "is_interactive": true
+  },
+  "Saved-375-EN.dc.html": {
+   "x": 1820,
+   "y": 40320,
+   "w": 375,
+   "h": 1300,
+   "title": "Saved items · EN · 375",
+   "is_interactive": true
+  },
+  "Alerts-375-EN.dc.html": {
+   "x": 2275,
+   "y": 40320,
+   "w": 375,
+   "h": 1300,
+   "title": "Drop alerts & size profile · EN · 375",
+   "is_interactive": true
+  },
+  "Drops-375-EN.dc.html": {
+   "x": 2730,
+   "y": 40320,
+   "w": 375,
+   "h": 1300,
+   "title": "Drop calendar · EN · 375",
+   "is_interactive": true
+  },
+  "Map-375-EN.dc.html": {
+   "x": 3185,
+   "y": 40320,
+   "w": 375,
+   "h": 812,
+   "title": "Thrift map · EN · 375",
+   "is_interactive": true
+  },
+  "Auth-375-EN.dc.html": {
+   "x": 3640,
+   "y": 40320,
+   "w": 375,
+   "h": 812,
+   "title": "Shopper log-in sheet · EN · 375",
+   "is_interactive": true
+  },
+  "Me-375-EN.dc.html": {
+   "x": 4095,
+   "y": 40320,
+   "w": 375,
+   "h": 900,
+   "title": "Shopper profile · EN · 375",
+   "is_interactive": true
+  },
+  "Dash-Hold-1440.dc.html": {
+   "x": 0,
+   "y": 43520,
+   "w": 1440,
+   "h": 1032,
+   "title": "Shop · hold · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Drop-1440.dc.html": {
+   "x": 1520,
+   "y": 43520,
+   "w": 1440,
+   "h": 1220,
+   "title": "Shop · drop · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Sync-1440.dc.html": {
+   "x": 3040,
+   "y": 43520,
+   "w": 1440,
+   "h": 1120,
+   "title": "Shop · sync · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Settings-1440.dc.html": {
+   "x": 4560,
+   "y": 43520,
+   "w": 1440,
+   "h": 1570,
+   "title": "Shop · settings · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Boosts-1440.dc.html": {
+   "x": 0,
+   "y": 45500,
+   "w": 1440,
+   "h": 1032,
+   "title": "Shop · my boosts · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Dash-Pay-1440.dc.html": {
+   "x": 1520,
+   "y": 45500,
+   "w": 1440,
+   "h": 1000,
+   "title": "Shop · pay boost · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Search-1440-EN.dc.html": {
+   "x": 0,
+   "y": 46960,
+   "w": 1440,
+   "h": 1500,
+   "title": "Search · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Item-1440-EN.dc.html": {
+   "x": 1520,
+   "y": 46960,
+   "w": 1440,
+   "h": 1500,
+   "title": "Item · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Shop-1440-EN.dc.html": {
+   "x": 3040,
+   "y": 46960,
+   "w": 1440,
+   "h": 2200,
+   "title": "Shop · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Saved-1440-EN.dc.html": {
+   "x": 4560,
+   "y": 46960,
+   "w": 1440,
+   "h": 1300,
+   "title": "Saved · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Alerts-1440-EN.dc.html": {
+   "x": 6080,
+   "y": 46960,
+   "w": 1440,
+   "h": 1200,
+   "title": "Alerts · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Drops-1440-EN.dc.html": {
+   "x": 7600,
+   "y": 46960,
+   "w": 1440,
+   "h": 1100,
+   "title": "Drops · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Map-1440-EN.dc.html": {
+   "x": 9120,
+   "y": 46960,
+   "w": 1440,
+   "h": 1100,
+   "title": "Map · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Auth-1440-EN.dc.html": {
+   "x": 10640,
+   "y": 46960,
+   "w": 1440,
+   "h": 900,
+   "title": "Log-in · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Me-1440.dc.html": {
+   "x": 0,
+   "y": 49700,
+   "w": 1440,
+   "h": 1060,
+   "title": "Me · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Notif-1440.dc.html": {
+   "x": 1520,
+   "y": 49700,
+   "w": 1440,
+   "h": 1310,
+   "title": "Notifications · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "About-1440.dc.html": {
+   "x": 3040,
+   "y": 49700,
+   "w": 1440,
+   "h": 1310,
+   "title": "About · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Legal-1440.dc.html": {
+   "x": 4560,
+   "y": 49700,
+   "w": 1440,
+   "h": 1160,
+   "title": "Terms & privacy · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Notif-375-EN.dc.html": {
+   "x": 0,
+   "y": 51550,
+   "w": 375,
+   "h": 1150,
+   "title": "Notification settings · 375 · English",
+   "is_interactive": true
+  },
+  "About-375-EN.dc.html": {
+   "x": 455,
+   "y": 51550,
+   "w": 375,
+   "h": 1150,
+   "title": "About · 375 · English",
+   "is_interactive": true
+  },
+  "Legal-375-EN.dc.html": {
+   "x": 910,
+   "y": 51550,
+   "w": 375,
+   "h": 1000,
+   "title": "Terms & privacy · 375 · English",
+   "is_interactive": true
+  },
+  "Me-1440-EN.dc.html": {
+   "x": 1365,
+   "y": 51550,
+   "w": 1440,
+   "h": 1060,
+   "title": "Me · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Notif-1440-EN.dc.html": {
+   "x": 2885,
+   "y": 51550,
+   "w": 1440,
+   "h": 1310,
+   "title": "Notifications · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "About-1440-EN.dc.html": {
+   "x": 4405,
+   "y": 51550,
+   "w": 1440,
+   "h": 1310,
+   "title": "About · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Legal-1440-EN.dc.html": {
+   "x": 5925,
+   "y": 51550,
+   "w": 1440,
+   "h": 1160,
+   "title": "Terms & privacy · English · 1440",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Swipe-375-EN.dc.html": {
+   "h": 812,
+   "is_interactive": true,
+   "title": "Swipe mode · 375 · English",
+   "w": 375,
+   "x": 7445,
+   "y": 51550
+  },
+  "NotFound-375-EN.dc.html": {
+   "h": 812,
+   "is_interactive": true,
+   "title": "Not found · 375 · English",
+   "w": 375,
+   "x": 7900,
+   "y": 51550
+  },
+  "NotFound-1440-EN.dc.html": {
+   "expand": "fill",
+   "h": 900,
+   "is_interactive": true,
+   "title": "Not found · 1440 · English",
+   "w": 1440,
+   "x": 8355,
+   "y": 51550
+  }
+ },
+ "createdOnFiles": {
+  "at": "2026-10-06T10:00:00Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "view": "canvas"
+ },
+ "notes": {
+  "t_404": {
+   "kind": "title1",
+   "maxW": 1895,
+   "text": "7 · Not found",
+   "w": 240,
+   "x": 0,
+   "y": 16540
+  },
+  "t_dash": {
+   "kind": "title1",
+   "maxW": 3415,
+   "text": "6 · Shop dashboard",
+   "w": 240,
+   "x": 0,
+   "y": 13840
+  },
+  "t_handoff": {
+   "kind": "title1",
+   "maxW": 4695,
+   "text": "8 · Handoff, English & link previews",
+   "w": 240,
+   "x": 0,
+   "y": 17840
+  },
+  "t_home": {
+   "kind": "title1",
+   "maxW": 4325,
+   "text": "1 · Home feed",
+   "w": 240,
+   "x": 0,
+   "y": 4140
+  },
+  "t_identity": {
+   "kind": "title1",
+   "maxW": 2960,
+   "text": "Identity & components",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "t_item": {
+   "kind": "title1",
+   "maxW": 4780,
+   "text": "4 · Item page",
+   "w": 240,
+   "x": 0,
+   "y": 10240
+  },
+  "t_shop": {
+   "kind": "title1",
+   "maxW": 2350,
+   "text": "3 · Shop page",
+   "w": 240,
+   "x": 0,
+   "y": 7140
+  },
+  "t_shoppers": {
+   "kind": "title1",
+   "maxW": 4155,
+   "text": "9 · Growth: shoppers",
+   "w": 240,
+   "x": 0,
+   "y": 20640
+  },
+  "t_shops": {
+   "kind": "title1",
+   "maxW": 2832,
+   "text": "10 · Growth: shops & content",
+   "w": 240,
+   "x": 0,
+   "y": 22540
+  },
+  "t_signin": {
+   "kind": "title1",
+   "maxW": 1895,
+   "text": "5 · Shop sign-in",
+   "w": 240,
+   "x": 0,
+   "y": 12540
+  },
+  "t_onb": {
+   "kind": "title1",
+   "maxW": 1740,
+   "text": "11 · Shop onboarding",
+   "w": 240,
+   "x": 0,
+   "y": 24440
+  },
+  "t_loop": {
+   "kind": "title1",
+   "maxW": 1740,
+   "text": "12 · Core loop: find, save, hold, edit",
+   "w": 240,
+   "x": 0,
+   "y": 26160
+  },
+  "t_trust": {
+   "kind": "title1",
+   "maxW": 3177,
+   "text": "13 · Trust, alerts & shop tools",
+   "w": 240,
+   "x": 0,
+   "y": 28060
+  },
+  "t_ops": {
+   "kind": "title1",
+   "maxW": 2805,
+   "text": "14 · Settings, info & admin",
+   "w": 240,
+   "x": 0,
+   "y": 29760
+  },
+  "t_desk": {
+   "kind": "title1",
+   "maxW": 2960,
+   "text": "15 · Desktop: search & saved",
+   "w": 240,
+   "x": 0,
+   "y": 31660
+  },
+  "t_desk2": {
+   "kind": "title1",
+   "maxW": 4480,
+   "text": "16 · Desktop: drops, alerts & map",
+   "w": 240,
+   "x": 0,
+   "y": 33710
+  },
+  "t_desk3": {
+   "kind": "title1",
+   "maxW": 4480,
+   "text": "17 · Desktop: log-in, report & edit",
+   "w": 240,
+   "x": 0,
+   "y": 35450
+  },
+  "t_boost": {
+   "kind": "title1",
+   "maxW": 3260,
+   "text": "18 · BOOST & profile",
+   "w": 240,
+   "x": 0,
+   "y": 37100
+  },
+  "t_states": {
+   "kind": "title1",
+   "maxW": 2187,
+   "text": "19 · Loading & errors",
+   "w": 240,
+   "x": 0,
+   "y": 38650
+  },
+  "t_en": {
+   "kind": "title1",
+   "maxW": 4470,
+   "text": "20 · English · shopper side",
+   "w": 240,
+   "x": 0,
+   "y": 40060
+  },
+  "t_desk4": {
+   "kind": "title1",
+   "maxW": 6000,
+   "text": "21 · Desktop: shop tools",
+   "w": 240,
+   "x": 0,
+   "y": 43260
+  },
+  "t_desk5": {
+   "kind": "title1",
+   "maxW": 2960,
+   "text": "22 · Desktop: BOOST",
+   "w": 240,
+   "x": 0,
+   "y": 45240
+  },
+  "t_en2": {
+   "kind": "title1",
+   "maxW": 12080,
+   "text": "23 · English · desktop",
+   "w": 240,
+   "x": 0,
+   "y": 46700
+  },
+  "t_desk6": {
+   "kind": "title1",
+   "maxW": 5920,
+   "text": "24 · Desktop: me & info",
+   "w": 240,
+   "x": 0,
+   "y": 49440
+  },
+  "t_en3": {
+   "kind": "title1",
+   "maxW": 9875,
+   "text": "25 · English · me & info",
+   "w": 240,
+   "x": 0,
+   "y": 51290
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "Cards.dc.html",
+  "Home-375.dc.html",
+  "Home-1440.dc.html",
+  "Home-1440-Empty.dc.html",
+  "Home-375-Empty.dc.html",
+  "Home-375-Early.dc.html",
+  "Shop-375.dc.html",
+  "Shop-1440.dc.html",
+  "Shop-375-Empty.dc.html",
+  "Item-375.dc.html",
+  "Item-1440.dc.html",
+  "Item-1440-Sold.dc.html",
+  "Item-375-Sold.dc.html",
+  "Item-375-NoPrice.dc.html",
+  "Item-375-Sticky.dc.html",
+  "SignIn-375.dc.html",
+  "SignIn-1440.dc.html",
+  "Dash-375.dc.html",
+  "Dash-1440.dc.html",
+  "DashStates.dc.html",
+  "NotFound-375.dc.html",
+  "NotFound-1440.dc.html",
+  "Tokens.dc.html",
+  "Home-1440-EN.dc.html",
+  "OG-Item.dc.html",
+  "OG-Shop.dc.html",
+  "OG-InContext.dc.html",
+  "Feat-Components.dc.html",
+  "Alerts-375.dc.html",
+  "Saved-375.dc.html",
+  "Swipe-375.dc.html",
+  "Drops-375.dc.html",
+  "Map-375.dc.html",
+  "Story-Item.dc.html",
+  "Story-Stats.dc.html",
+  "Dash-Stats-1440.dc.html",
+  "Post-Top10.dc.html",
+  "Story-DropNight.dc.html",
+  "Onb-Import-375.dc.html",
+  "Onb-Review-375.dc.html",
+  "Onb-Shop-375.dc.html",
+  "Onb-Live-375.dc.html",
+  "Search-375.dc.html",
+  "Auth-375.dc.html",
+  "Dash-Hold-375.dc.html",
+  "Dash-Edit-375.dc.html",
+  "Notif-375.dc.html",
+  "Report-375.dc.html",
+  "Dash-Drop-375.dc.html",
+  "Dash-Sync-375.dc.html",
+  "Empty-States.dc.html",
+  "Dash-Settings-375.dc.html",
+  "About-375.dc.html",
+  "Legal-375.dc.html",
+  "Admin-1440.dc.html",
+  "Search-1440.dc.html",
+  "Saved-1440.dc.html",
+  "Drops-1440.dc.html",
+  "Alerts-1440.dc.html",
+  "Map-1440.dc.html",
+  "Auth-1440.dc.html",
+  "Report-1440.dc.html",
+  "Dash-Edit-1440.dc.html",
+  "Dash-Boost-375.dc.html",
+  "Dash-Pay-375.dc.html",
+  "Dash-Boost-1440.dc.html",
+  "Dash-Boosts-375.dc.html",
+  "Me-375.dc.html",
+  "States.dc.html",
+  "Home-375-EN.dc.html",
+  "Search-375-EN.dc.html",
+  "Item-375-EN.dc.html",
+  "Shop-375-EN.dc.html",
+  "Saved-375-EN.dc.html",
+  "Alerts-375-EN.dc.html",
+  "Drops-375-EN.dc.html",
+  "Map-375-EN.dc.html",
+  "Auth-375-EN.dc.html",
+  "Me-375-EN.dc.html",
+  "Dash-Hold-1440.dc.html",
+  "Dash-Drop-1440.dc.html",
+  "Dash-Sync-1440.dc.html",
+  "Dash-Settings-1440.dc.html",
+  "Dash-Boosts-1440.dc.html",
+  "Dash-Pay-1440.dc.html",
+  "Search-1440-EN.dc.html",
+  "Item-1440-EN.dc.html",
+  "Shop-1440-EN.dc.html",
+  "Saved-1440-EN.dc.html",
+  "Alerts-1440-EN.dc.html",
+  "Drops-1440-EN.dc.html",
+  "Map-1440-EN.dc.html",
+  "Auth-1440-EN.dc.html",
+  "Me-1440.dc.html",
+  "Notif-1440.dc.html",
+  "About-1440.dc.html",
+  "Legal-1440.dc.html",
+  "Notif-375-EN.dc.html",
+  "About-375-EN.dc.html",
+  "Legal-375-EN.dc.html",
+  "Me-1440-EN.dc.html",
+  "Notif-1440-EN.dc.html",
+  "About-1440-EN.dc.html",
+  "Legal-1440-EN.dc.html",
+  "Swipe-375-EN.dc.html",
+  "NotFound-375-EN.dc.html",
+  "NotFound-1440-EN.dc.html"
+ ],
+ "pages": [],
+ "title": "DEADSTOCK"
+}

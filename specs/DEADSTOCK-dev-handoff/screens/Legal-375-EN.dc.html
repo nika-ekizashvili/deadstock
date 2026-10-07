@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Terms & privacy — mobile — EN</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; min-height: 1000px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<header style="display: flex; align-items: center; gap: 8px; padding: 8px 12px 8px 6px; border-bottom: 1px solid #2E2E2B">
+<a href="About-375-EN.dc.html" aria-label="Back" title="Back" style="flex-shrink: 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></a>
+<h1 style="flex: 1; min-width: 0; margin: 0; font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 18px; font-weight: 800">Terms</h1>
+
+</header>
+<div role="tablist" aria-label="Document" style="display: flex; gap: 4px; margin: 16px 16px 0; padding: 3px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<sc-for list="{{tabs}}" as="tb" hint-placeholder-count="2">
+<button type="button" role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.style}}">{{tb.label}}</button>
+</sc-for>
+</div>
+<main style="display: flex; flex-direction: column; gap: 22px; padding: 24px 16px 56px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #A3A39B">DRAFT · LAWYER REVIEW</span>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 12px; background: #171716">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #D4FF3A">TL;DR</span>
+<sc-for list="{{tldr}}" as="t" hint-placeholder-count="3">
+<span style="display: flex; gap: 10px; font-size: 15px; line-height: 22px"><span style="flex-shrink: 0; color: #D4FF3A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>{{t.text}}</span>
+</sc-for>
+</div>
+<sc-for list="{{sections}}" as="sec" hint-placeholder-count="4">
+<section style="display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-size: 18px; font-weight: 800">{{sec.h}}</h2>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #A3A39B">{{sec.p}}</p>
+</section>
+</sc-for>
+</main>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 0 }; }
+  renderVals() {
+    var self = this, t = this.state.tab;
+    var DOC = [
+      { tldr: ['We pull IG posts — the sale is between you and the shop.', 'No payments on the site.', 'Fake or scam → Report.'],
+        sec: ['1 · Who we are', '2 · Shop responsibility', '3 · Banned items', '4 · Closing your account'], p: ["DEADSTOCK shows posts from Instagram second-hand shops. We don’t sell items or take payments.", "Description, price, condition and handover are on the shop. The deal is between the shop and the buyer.", "Fakes/replicas, stolen goods, weapons, medicines, anything illegal. Breaking this → hidden or blocked.", "Delete your account any time. BOOST: if the item sells, the time left moves to another item; no refunds."] },
+      { tldr: ['We only keep your number / Google and saved items.', 'We sell nothing to third parties.', 'Delete your account in one tap.'],
+        sec: ['1 · What we collect', '2 · Why', '3 · Who we share with', '4 · Your rights'], p: ["Buyer: number or Google/IG ID, saved, alerts, sizes. Shop: IG profile, posts, address.", "Log-in, alerts and feed. Never for ads.", "SMS and the payment provider (Bank of Georgia) — only what’s needed. We sell to no one.", "See, edit or delete: Me → Delete account, or support@deadstock.ge."] }
+    ];
+    var d = DOC[t];
+    return {
+      tabs: ['Terms', 'Privacy'].map(function (l, i) {
+        var on = t === i;
+        return { label: l, on: on ? 'true' : 'false', pick: function () { self.setState({ tab: i }); },
+          style: 'flex:1;height:40px;border:0;border-radius:999px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;' + (on ? 'background:#EDEDE8;color:#0E0E0E' : 'background:transparent;color:#A3A39B') };
+      }),
+      tldr: d.tldr.map(function (x) { return { text: x }; }),
+      sections: d.sec.map(function (h, i) { return { h: h, p: d.p[i] }; })
+    };
+  }
+}
+</script>
+</body>
+</html>

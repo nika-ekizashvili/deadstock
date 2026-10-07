@@ -18,7 +18,8 @@ const schema = z.object({
   S3_BUCKET: z.string().default("deadstock"),
   S3_ACCESS_KEY: z.string(),
   S3_SECRET_KEY: z.string(),
-  S3_PUBLIC_URL: z.string().url(),
+  /** Optional: public bucket URL. Unset → images are served through /media. */
+  S3_PUBLIC_URL: z.string().url().optional(),
 
   SYNC_CRON: z.string().default("*/15 * * * *"),
   FULL_SYNC_CRON: z.string().default("30 3 * * *"),

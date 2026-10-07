@@ -1,6 +1,7 @@
 import { relations, sql } from "drizzle-orm";
 import {
   boolean,
+  doublePrecision,
   index,
   integer,
   numeric,
@@ -37,6 +38,9 @@ export const shops = pgTable("shops", {
   bio: text("bio"),
   city: text("city").notNull().default("tbilisi"),
   address: text("address"),
+  /** Map pin. Set by hand for the pilot shops. */
+  lat: doublePrecision("lat"),
+  lng: doublePrecision("lng"),
   avatarKey: text("avatar_key"),
   status: shopStatus("status").notNull().default("pending"),
   /** First 10 shops are free during the MVP. */
@@ -55,8 +59,8 @@ export const instagramAccounts = pgTable("instagram_accounts", {
   /** AES-256-GCM encrypted long-lived token (see lib/crypto.ts). */
   accessTokenEnc: text("access_token_enc").notNull(),
   tokenExpiresAt: timestamp("token_expires_at", { withTimezone: true }).notNull(),
-  /** When true, imported items skip the review queue. */
-  autoPublish: boolean("auto_publish").notNull().default(false),
+  /** When true, imported items skip the review queue. On by default for the pilot. */
+  autoPublish: boolean("auto_publish").notNull().default(true),
   lastSyncedAt: timestamp("last_synced_at", { withTimezone: true }),
   lastFullSyncAt: timestamp("last_full_sync_at", { withTimezone: true }),
   ...timestamps,
@@ -73,6 +77,8 @@ export const listings = pgTable(
     igMediaId: text("ig_media_id").notNull(),
     permalink: text("permalink").notNull(),
     caption: text("caption"),
+    /** Post is a video (or a carousel starting with one) — shows the ▶ badge. */
+    isVideo: boolean("is_video").notNull().default(false),
     captionHash: text("caption_hash"),
 
     title: text("title"),

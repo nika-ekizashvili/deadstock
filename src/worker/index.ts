@@ -4,13 +4,18 @@
  * - nightly: full sync (detects deleted/archived posts → sold)
  */
 import "dotenv/config";
+import { notLike } from "drizzle-orm";
 import { db, schema } from "@/db";
 import { env } from "@/env";
 import { boss, enqueueSync, QUEUES, type SyncAccountJob } from "@/lib/queue";
 import { syncAccount } from "./sync";
 
 async function enqueueAll(full: boolean) {
-  const accounts = await db().select({ id: schema.instagramAccounts.id }).from(schema.instagramAccounts);
+  // Seeded demo shops ("demo-*") have no real token.
+  const accounts = await db()
+    .select({ id: schema.instagramAccounts.id })
+    .from(schema.instagramAccounts)
+    .where(notLike(schema.instagramAccounts.igUserId, "demo-%"));
   for (const a of accounts) await enqueueSync(a.id, full);
   console.log(`[worker] queued ${full ? "full" : "incremental"} sync for ${accounts.length} accounts`);
 }

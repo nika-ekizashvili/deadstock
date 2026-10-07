@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Onboarding 4 — live</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; min-height: 812px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<header style="display: flex; align-items: center; gap: 12px; padding: 10px 16px 10px 6px; border-bottom: 1px solid #2E2E2B">
+<a href="Onb-Shop-375.dc.html" aria-label="უკან" title="უკან" style="flex-shrink: 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></a>
+<div role="progressbar" aria-label="ნაბიჯი 4 / 4" aria-valuemin="1" aria-valuemax="4" aria-valuenow="4" style="flex: 1; display: flex; gap: 6px"><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span></div>
+<span style="flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #A3A39B">4/4</span>
+</header>
+<main style="flex: 1; display: flex; flex-direction: column; gap: 22px; padding: 28px 16px 40px">
+<div style="position: relative; height: 210px; border-radius: 16px; background: #D4FF3A; color: #0E0E0E; overflow: hidden">
+<span style="position: absolute; left: 20px; top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.14em">ძველი კარადა</span>
+<span style="position: absolute; left: 14px; top: 44px; font-weight: 900; font-stretch: 125%; font-size: 112px; line-height: 0.85; letter-spacing: -0.06em">LIVE</span>
+<span style="position: absolute; right: 18px; bottom: 18px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 4px; background: #0E0E0E; color: #D4FF3A; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; transform: rotate(-4deg)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"></path></svg>12</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 8px; height: 52px; padding: 0 6px 0 16px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<span style="flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 14px">deadstock.ge/<strong style="color: #D4FF3A">dzveli-karada</strong></span>
+<button type="button" class="ds-btn" aria-label="ლინკის კოპირება" title="კოპირება" onClick="{{copy}}" style="{{copyBtn}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{copyIcon}}"></path></svg>{{copyText}}</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">SHARE</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="Story-Item.dc.html" class="ds-btn ds-s" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border: 1px solid #2E2E2B; border-radius: 12px; color: #EDEDE8; text-decoration: none">
+<span style="align-self: flex-start; width: 34px; height: 60px; border-radius: 6px; background: #D4FF3A; box-shadow: inset 0 -22px 0 #0E0E0E, 0 0 0 2px #2E2E2B"></span>
+<span style="font-size: 14px; font-weight: 700">IG Story</span>
+<span style="font-size: 12px; color: #A3A39B"></span>
+</a>
+<a href="Shop-375.dc.html" class="ds-btn ds-s" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border: 1px solid #2E2E2B; border-radius: 12px; color: #EDEDE8; text-decoration: none">
+<span style="align-self: flex-start; width: 60px; height: 60px; border-radius: 999px; background: #C9A27A; box-shadow: 0 0 0 2px #0E0E0E, 0 0 0 4px #D4FF3A"></span>
+<span style="font-size: 14px; font-weight: 700">Bio ლინკი</span>
+<span style="font-size: 12px; color: #A3A39B">→</span>
+</a>
+</div>
+</div>
+
+<a href="Dash-375.dc.html" class="ds-btn ds-p" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.04em; flex: none; margin-top: auto">DASHBOARD<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</main>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":812}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { copied: false }; }
+  renderVals() {
+    var self = this, c = this.state.copied;
+    return {
+      copyText: c ? 'OK' : 'COPY',
+      copyIcon: c ? 'm5 12 5 5 9-10' : 'M9 9h11v11H9zM5 15H4V4h11v1',
+      copyBtn: "display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px;border:0;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;cursor:pointer;" + (c ? 'background:#D4FF3A;color:#0E0E0E' : 'background:#EDEDE8;color:#0E0E0E'),
+      copy: function () { self.setState({ copied: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

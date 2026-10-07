@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Link preview in a chat</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#000}
+</style>
+</helmet>
+<div style="position: relative; width: 375px; height: 812px; overflow: hidden; display: flex; flex-direction: column; background: #000; color: #F2F2F2; font-family: system-ui, 'Noto Sans Georgian', sans-serif">
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid #1C1C1C">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+<span style="width: 32px; height: 32px; border-radius: 999px; background: #6F6A8F"></span>
+<div style="display: flex; flex-direction: column">
+<span style="font-size: 15px; font-weight: 600">ნინო</span>
+<span style="font-size: 12px; color: #8A8A8A">აქტიურია ახლა</span>
+</div>
+</div>
+
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 16px">
+<div style="align-self: flex-start; max-width: 70%; padding: 10px 14px; border-radius: 20px; background: #262626; font-size: 15px; line-height: 21px">ზამთრისთვის ტყავის ქურთუკს ვეძებ</div>
+
+<div style="align-self: flex-end; display: flex; flex-direction: column; gap: 4px; max-width: 262px">
+<div style="padding: 10px 14px; border-radius: 20px; background: #3A5BFF; font-size: 15px; line-height: 21px">ეს ნახე, XS-ია</div>
+<div style="overflow: hidden; border-radius: 18px; background: #262626">
+<div style="position: relative; width: 262px; height: 137.55px; overflow: hidden">
+<div style="position: absolute; left: 0; top: 0; width: 1200px; height: 630px; transform: scale(0.21833); transform-origin: 0 0; display: flex; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', sans-serif">
+<div style="position: relative; flex-shrink: 0; width: 504px; height: 630px; background: radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), #3A332C">
+<span style="position: absolute; top: 28px; left: 28px; width: 64px; height: 64px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12"></path><path d="M7 2v4c0 3 5 4 5 6s-5 3-5 6v4"></path><path d="M17 2v4c0 3-5 4-5 6s5 3 5 6v4"></path></svg></span>
+</div>
+<div style="width: 8px; background: #D4FF3A"></div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 52px 56px 48px">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 30px; letter-spacing: -0.04em">DEADSTOCK</span>
+<div style="display: flex; flex-direction: column; gap: 28px">
+<span style="font-size: 54px; line-height: 60px; font-weight: 800">Pepe Jeans leather jacket</span>
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 14px; padding: 12px 22px 12px 16px; border-radius: 6px; background: #EDEDE8; color: #0E0E0E; font-size: 52px; line-height: 1; font-weight: 700; transform: rotate(-3deg)"><span style="width: 12px; height: 12px; border-radius: 999px; background: #0E0E0E"></span>220 ₾</span>
+</div>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #A3A39B">dzveli-karada.deadstock.ge</span>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 10px 14px 12px">
+<span style="font-size: 14px; font-weight: 600; line-height: 19px">Pepe Jeans leather jacket — 220 ₾ · ძველი კარადა</span>
+<span style="font-size: 12px; color: #8A8A8A">deadstock.ge</span>
+</div>
+</div>
+</div>
+
+<div style="align-self: flex-start; max-width: 70%; padding: 10px 14px; border-radius: 20px; background: #262626; font-size: 15px; line-height: 21px">ვაა, ახლავე მივწერ</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 16px 30px">
+<div style="flex: 1; height: 44px; display: flex; align-items: center; padding: 0 18px; border-radius: 999px; background: #1C1C1C; color: #8A8A8A; font-size: 15px">შეტყობინება…</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":812}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

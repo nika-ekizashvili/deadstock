@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>About — mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; min-height: 1150px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 12px 10px 16px; border-bottom: 1px solid #2E2E2B">
+<a href="Home-375.dc.html" aria-label="DEADSTOCK — მთავარი" style="display: flex; align-items: flex-start; gap: 2px; color: #EDEDE8; text-decoration: none"><span style="font-weight: 900; font-stretch: 125%; font-size: 20px; line-height: 1; letter-spacing: -0.04em">DEADSTOCK</span><span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 10px; color: #D4FF3A">.ge</span></a>
+<a href="Home-375.dc.html" aria-label="დახურვა" title="დახურვა" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #EDEDE8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></a>
+</header>
+<main style="display: flex; flex-direction: column; gap: 36px; padding: 32px 16px 0">
+<h1 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: 52px; line-height: 0.92; letter-spacing: -0.05em">ყველა<br>სექენდი.<br><span style="color: #D4FF3A">ერთ ფიდში.</span></h1>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{steps}}" as="st" hint-placeholder-count="3">
+<li style="display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #2E2E2B">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #D4FF3A">{{st.n}}</span>
+<span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 999px; background: #171716; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{st.icon}}"></path></svg></span>
+<span style="font-size: 16px; line-height: 22px; font-weight: 700">{{st.text}}</span>
+</li>
+</sc-for>
+</ol>
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 22px 20px; border-radius: 16px; background: #D4FF3A; color: #0E0E0E">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em">GOT A SHOP?</span>
+<span style="font-size: 22px; line-height: 28px; font-weight: 800">IG გაქვს? მზად ხარ.</span>
+<a href="SignIn-375.dc.html" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border-radius: 999px; background: #0E0E0E; color: #D4FF3A; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700">SELL<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</main>
+<footer style="display: flex; flex-direction: column; gap: 22px; margin-top: 48px; padding: 28px 16px 40px; border-top: 1px solid #2E2E2B">
+<nav aria-label="ინფო" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px">
+<a href="Legal-375.dc.html" style="display: flex; align-items: center; min-height: 44px; color: #EDEDE8; text-decoration: none; font-size: 15px">წესები</a>
+<a href="Legal-375.dc.html" style="display: flex; align-items: center; min-height: 44px; color: #EDEDE8; text-decoration: none; font-size: 15px">კონფიდენციალურობა</a>
+<a href="Report-375.dc.html" style="display: flex; align-items: center; min-height: 44px; color: #EDEDE8; text-decoration: none; font-size: 15px">უსაფრთხოება</a>
+<a href="mailto:support@deadstock.ge" style="display: flex; align-items: center; min-height: 44px; color: #EDEDE8; text-decoration: none; font-size: 15px">კონტაქტი</a>
+</nav>
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 34px; line-height: 0.85; letter-spacing: -0.04em; color: #222220">DEADSTOCK</span>
+<a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #2E2E2B; border-radius: 999px; color: #EDEDE8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+</div>
+</footer>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":1150}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { steps: [
+      ['01', 'მაღაზიები IG-ზე დებენ', 'M3 3h18v18H3zM8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0'],
+      ['02', 'ჩვენ ვაგროვებთ აქ', 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z'],
+      ['03', 'შენ DM — და შენია', 'M22 2 11 13M22 2 15 22l-4-9-9-4z']
+    ].map(function (s) { return { n: s[0], text: s[1], icon: s[2] }; }) };
+  }
+}
+</script>
+</body>
+</html>

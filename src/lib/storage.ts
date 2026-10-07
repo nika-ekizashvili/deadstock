@@ -2,7 +2,7 @@ import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { env } from "@/env";
 
 let client: S3Client | undefined;
-function s3() {
+export function s3() {
   const e = env();
   client ??= new S3Client({
     endpoint: e.S3_ENDPOINT,
@@ -33,6 +33,22 @@ export async function mirrorImage(sourceUrl: string, key: string): Promise<strin
   return key;
 }
 
+/** Upload bytes we already have (seed data, avatars). Returns the object key. */
+export async function putObject(key: string, body: Buffer | string, contentType: string): Promise<string> {
+  await s3().send(
+    new PutObjectCommand({
+      Bucket: env().S3_BUCKET,
+      Key: key,
+      Body: body,
+      ContentType: contentType,
+      CacheControl: "public, max-age=31536000, immutable",
+    }),
+  );
+  return key;
+}
+
+/** Public bucket URL when S3_PUBLIC_URL is set, else served through the app at /media/<key>. */
 export function publicUrl(key: string): string {
-  return `${env().S3_PUBLIC_URL.replace(/\/$/, "")}/${key}`;
+  const base = env().S3_PUBLIC_URL;
+  return base ? `${base.replace(/\/$/, "")}/${key}` : `/media/${key}`;
 }

@@ -1,6 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const RESERVED = new Set(["www", "app", "api", "admin", "dashboard", "static"]);
+/** Subdomains that are never shops: infrastructure plus every top-level route name. */
+export const RESERVED = new Set([
+  "www", "app", "api", "admin", "static", "cdn", "mail", "assets",
+  "search", "map", "saved", "sell", "dash", "dashboard", "about", "legal", "drops", "alerts", "me", "i", "s",
+]);
 
 /**
  * [shop].deadstock.ge/  →  /s/[shop]

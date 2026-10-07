@@ -19,5 +19,10 @@ COPY --from=build /app/public ./public
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=build /app/src ./src
 COPY --from=build /app/tsconfig.json ./tsconfig.json
+# Migrations (release step: node_modules/.bin/drizzle-kit migrate) and the seed script
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/drizzle.config.ts ./drizzle.config.ts
+COPY --from=build /app/drizzle ./drizzle
+COPY --from=build /app/scripts ./scripts
 EXPOSE 3000
 CMD ["node", "server.js"]

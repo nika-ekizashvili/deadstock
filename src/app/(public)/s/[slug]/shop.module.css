@@ -1,0 +1,148 @@
+/* Shop page (handoff: Shop-375 / Shop-1440 / Shop-375-Empty). Mobile default, desktop from 900px. */
+
+/* Cards on a shop page don't repeat the shop name/avatar */
+.page :global(.ds-card__shop),
+.page :global(.ds-avatar-dot) { display: none; }
+
+/* ---- Top bar: DEADSTOCK / slug ------------------------------------------ */
+.bar { border-bottom: 1px solid var(--ds-line); }
+.barInner {
+  display: flex; align-items: center; gap: 8px; min-width: 0;
+  min-height: 66px; padding: 10px 12px 10px 16px;
+}
+.mark {
+  color: var(--ds-text); text-decoration: none;
+  font-weight: 900; font-stretch: 125%; font-size: 16px; letter-spacing: -0.04em;
+}
+.mark:hover { color: var(--ds-text); }
+.slash { color: var(--ds-faint); }
+.slug {
+  font-family: var(--ds-font-mono); font-size: 11px; color: var(--ds-muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* ---- Shop header -------------------------------------------------------- */
+.head { display: flex; flex-direction: column; gap: 14px; padding: 32px 16px 28px; }
+.avatar {
+  position: relative; flex-shrink: 0; width: 96px; height: 96px; border-radius: 999px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background-image: radial-gradient(100% 100% at 30% 25%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 60%);
+  background-color: var(--ds-raised);
+  box-shadow: 0 0 0 4px var(--ds-bg), 0 0 0 6px var(--ds-line);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar span {
+  font-family: var(--ds-font-geo); font-size: 44px; line-height: 1; font-weight: 800; color: var(--ds-bg);
+}
+.info { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.name {
+  margin: 0; font-family: var(--ds-font-geo); font-size: 36px; line-height: 44px; font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.bio { margin: 0; font-size: 15px; line-height: 23px; white-space: pre-line; }
+.bio:empty { display: none; }
+.stats { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: 14px; color: var(--ds-muted); }
+.stats:empty { display: none; }
+.stat { display: flex; align-items: center; gap: 6px; }
+.stat svg { flex-shrink: 0; }
+.num { font-family: var(--ds-font-mono); font-size: 13px; }
+.numOn { color: var(--ds-text); }
+.miniStamp {
+  padding: 1px 5px; border: 1.5px solid currentColor; border-radius: 3px;
+  font-family: var(--ds-font-sans); font-size: 9px; line-height: 14px; font-weight: 800; letter-spacing: 0.06em;
+  transform: rotate(-8deg);
+}
+
+.actions { display: flex; gap: 8px; }
+.igBtn {
+  flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 10px;
+  height: 52px; padding: 0 20px; border-radius: 999px; background: var(--ds-lime); color: var(--ds-on-lime);
+  text-decoration: none; font-family: var(--ds-font-mono); font-size: 15px; font-weight: 700;
+  white-space: nowrap; overflow: hidden;
+}
+.igBtn:hover { color: var(--ds-on-lime); }
+.igBtn svg { flex-shrink: 0; }
+.shareBtn {
+  flex-shrink: 0; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--ds-line); border-radius: 999px; background: transparent; color: var(--ds-text);
+}
+
+/* ---- Listings ----------------------------------------------------------- */
+.section { padding: 20px 16px 0; border-top: 1px solid var(--ds-line); }
+.soldSection { display: flex; flex-direction: column; gap: 18px; margin-top: 48px; }
+.soldHead { display: flex; align-items: center; gap: 10px; color: var(--ds-muted); }
+.soldStamp {
+  padding: 2px 8px; border: 2px solid currentColor; border-radius: 4px;
+  font-size: 13px; line-height: 18px; font-weight: 800; letter-spacing: 0.06em; transform: rotate(-4deg);
+}
+.soldN { font-family: var(--ds-font-mono); font-size: 13px; }
+
+.empty {
+  display: flex; align-items: center; gap: 16px;
+  padding: 24px 20px; border: 1px dashed var(--ds-line); border-radius: 12px;
+}
+.empty svg { flex-shrink: 0; }
+.emptyZero { font-weight: 900; font-stretch: 125%; font-size: 40px; line-height: 1; letter-spacing: -0.04em; }
+.emptyNote {
+  margin-left: auto; text-align: right;
+  font-family: var(--ds-font-mono); font-size: 11px; line-height: 16px; letter-spacing: 0.1em; color: var(--ds-muted);
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+.foot { margin-top: 56px; border-top: 1px solid var(--ds-line); }
+.footInner {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
+  padding: 28px 16px 40px;
+}
+.footMark {
+  font-weight: 900; font-stretch: 125%; font-size: 30px; line-height: 0.85; letter-spacing: -0.04em;
+  color: var(--ds-ghost); text-decoration: none;
+}
+.footMark:hover { color: var(--ds-raised); }
+.footLink { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700; text-decoration: none; }
+
+/* ---- Desktop ------------------------------------------------------------ */
+@media (min-width: 900px) {
+  .barInner {
+    gap: 12px; max-width: var(--ds-container); margin: 0 auto;
+    min-height: 73px; padding: 14px 48px;
+  }
+  .mark { font-size: 18px; }
+  .slug { font-size: 13px; }
+
+  .head {
+    flex-direction: row; flex-wrap: wrap; align-items: flex-end; gap: 40px;
+    max-width: var(--ds-container); margin: 0 auto; padding: 72px 48px 56px;
+  }
+  .avatar { width: 144px; height: 144px; box-shadow: 0 0 0 5px var(--ds-bg), 0 0 0 7px var(--ds-line); }
+  .avatar span { font-size: 64px; }
+  .info { flex: 1 1 520px; gap: 16px; }
+  .name { font-size: 64px; line-height: 72px; letter-spacing: -0.01em; }
+  .bio { max-width: 640px; font-size: 18px; line-height: 28px; }
+  .stats { gap: 12px 28px; font-size: 15px; }
+  .stat { gap: 8px; }
+  .stat svg { width: 18px; height: 18px; }
+  .num { font-size: 14px; }
+  .miniStamp { padding: 1px 6px; font-size: 10px; }
+
+  .actions { flex-shrink: 0; gap: 10px; }
+  .igBtn { flex: 0 1 auto; height: 56px; min-width: 170px; padding: 0 24px; gap: 10px; }
+  .shareBtn { width: 56px; height: 56px; }
+
+  .main {
+    display: flex; flex-direction: column; gap: 72px;
+    max-width: var(--ds-container); margin: 0 auto; padding: 0 48px 96px;
+  }
+  .section { padding: 28px 0 0; }
+  .soldSection { gap: 28px; margin-top: 0; }
+  .soldHead { gap: 12px; }
+  .soldStamp { padding: 3px 10px; font-size: 15px; line-height: 20px; }
+  .soldN { font-size: 14px; }
+  .empty { gap: 20px; padding: 32px 28px; }
+  .emptyZero { font-size: 56px; }
+  .emptyNote { font-size: 12px; }
+
+  .foot { margin-top: 0; }
+  .footInner { align-items: center; gap: 16px; max-width: var(--ds-container); margin: 0 auto; padding: 40px 48px; }
+  .footMark { font-size: 40px; }
+}

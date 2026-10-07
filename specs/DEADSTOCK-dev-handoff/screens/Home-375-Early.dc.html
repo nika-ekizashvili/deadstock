@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Home — early days — mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-card .ds-ph{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ds-card:hover .ds-ph{transform:scale(1.05)}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-marquee{animation:ds-marquee 30s linear infinite}
+@keyframes ds-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ds-marquee{animation:none}.ds-card .ds-ph,.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; width: 375px; min-height: 1800px; overflow: hidden; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 12px 10px 16px; border-bottom: 1px solid #2E2E2B">
+<a href="Home-375.dc.html" aria-label="DEADSTOCK — მთავარი" style="display: flex; align-items: flex-start; gap: 2px; color: #EDEDE8; text-decoration: none">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 20px; line-height: 1; letter-spacing: -0.04em">DEADSTOCK</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 10px; color: #D4FF3A">.ge</span>
+</a>
+<div style="display: flex; align-items: center; gap: 4px">
+<a href="SignIn-375.dc.html" aria-label="გაყიდე" title="გაყიდე" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #EDEDE8">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.5-5h-13z"></path><path d="M5 9v11h14V9"></path><path d="M10 20v-6h4v6"></path></svg>
+</a>
+<div role="group" aria-label="ენა / Language" style="display: flex; padding: 2px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<button type="button" aria-pressed="true" style="height: 40px; min-width: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: #EDEDE8; color: #0E0E0E; font-family: inherit; font-size: 13px; font-weight: 700">ქარ</button>
+<button type="button" aria-pressed="false" style="height: 40px; min-width: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: transparent; color: #A3A39B; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500">ENG</button>
+</div>
+</div>
+</header>
+
+<div aria-label="ახლახან დაიდო" style="overflow: hidden; background: #D4FF3A; color: #0E0E0E">
+<div class="ds-marquee" style="display: flex; width: max-content">
+<sc-for list="{{ticker}}" as="tk" hint-placeholder-count="6">
+<span style="display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 18px; font-size: 13px; font-weight: 600; white-space: nowrap"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em">NEW</span>{{tk.text}}<span aria-hidden="true" style="padding-left: 10px">✦</span></span>
+</sc-for>
+</div>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 18px; padding: 16px 16px 20px">
+<label style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 16px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A3A39B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+<input type="search" aria-label="ძებნა" placeholder="რას ეძებ?" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #EDEDE8; font-family: inherit; font-size: 16px"><a href="Search-375.dc.html" aria-label="ძებნა" title="ძებნა" class="ds-btn" style="flex-shrink: 0; width: 36px; height: 36px; margin-right: -10px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #D4FF3A; color: #0E0E0E"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</label>
+</section>
+
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 20px 16px 16px; border-top: 1px solid #2E2E2B">
+<h2 style="margin: 0; font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 22px; line-height: 28px; font-weight: 800">ახალი</h2>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #A3A39B">3 ITEMS</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 12px; padding: 0 16px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="3">
+<div style="position: relative; min-width: 0">
+<a href="Item-375.dc.html" class="ds-card" style="display: flex; flex-direction: column; gap: 12px; min-width: 0; color: #EDEDE8; text-decoration: none">
+<div style="position: relative; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; background: #171716">
+<div class="ds-ph" style="{{it.photo}}"></div>
+<span style="position: absolute; left: 8px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px 5px 7px; border-radius: 3px; background: #EDEDE8; color: #0E0E0E; font-weight: 700; font-size: 14px; line-height: 1; font-variant-numeric: tabular-nums; transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35)"><span style="width: 5px; height: 5px; border-radius: 999px; background: #0E0E0E"></span>{{it.price}}</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; line-height: 18px; font-weight: 500">{{it.title}}</span>
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #A3A39B">
+<span style="flex-shrink: 0; padding: 1px 7px; border: 1px solid #2E2E2B; border-radius: 999px; font-family: 'JetBrains Mono', 'Noto Sans Georgian', monospace; font-size: 10px; font-weight: 500; color: #EDEDE8">{{it.size}}</span>
+<span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">demo-shop</span>
+</span>
+</div>
+</a>
+<button type="button" class="ds-btn" aria-label="შენახვა" title="შენახვა" aria-pressed="{{it.savedAria}}" onClick="{{it.toggleSave}}" style="{{it.heartBtn}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="{{it.heartFill}}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></button>
+</div>
+</sc-for>
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 10px; aspect-ratio: 4 / 5; padding: 14px; box-sizing: border-box; border: 1px dashed #2E2E2B; border-radius: 4px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #D4FF3A">MORE SOON</span>
+<span style="font-size: 18px; line-height: 24px; font-weight: 800">სულ ესაა.<br>ჯერ.</span>
+</div>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 14px; margin: 40px 16px 120px; padding: 24px 20px; border: 1px solid #2E2E2B; border-radius: 12px; background: #171716">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #D4FF3A">YOUR SHOP HERE?</span>
+<a href="SignIn-375.dc.html" class="ds-btn ds-p" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-size: 16px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.5-5h-13z"></path><path d="M5 9v11h14V9"></path><path d="M10 20v-6h4v6"></path></svg>
+გაყიდე</a>
+</section>
+
+<nav aria-label="მენიუ" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; justify-content: space-around; padding: 8px 8px 26px; background: rgba(14, 14, 14, 0.94); border-top: 1px solid #2E2E2B">
+<sc-for list="{{nav}}" as="tb" hint-placeholder-count="5">
+<a href="{{tb.href}}" aria-label="{{tb.n}}" title="{{tb.n}}" style="{{tb.style}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{tb.d}}"></path></svg><sc-if value="{{tb.dot}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 8px; right: 12px; width: 8px; height: 8px; border-radius: 999px; background: #D4FF3A; box-shadow: 0 0 0 2px #0E0E0E"></span></sc-if></a>
+</sc-for>
+</nav>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":1800}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { saved: { 0: true } }; }
+  renderVals() {
+    var self = this;
+    var savedN = Object.keys(self.state.saved).filter(function (k) { return self.state.saved[k]; }).length;
+    var tabBase = 'position:relative;display:flex;align-items:center;justify-content:center;width:56px;height:48px;border-radius:999px;';
+    var nav = [
+      ['მთავარი', 'M3 11 12 3l9 8v10h-6v-6H9v6H3z', 'Home-375.dc.html', false],
+      ['დროპები', 'M4 6h16v15H4zM4 10h16M8 3v4M16 3v4', 'Drops-375.dc.html', true],
+      ['რუკა', 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z', 'Map-375.dc.html', false],
+      ['შენახული · ' + savedN, 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z', 'Saved-375.dc.html', false],
+      ['ალერტები', 'M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4', 'Alerts-375.dc.html', true]
+    ].map(function (t, k) { return { n: t[0], d: t[1], href: t[2], dot: t[3], style: tabBase + (k === 0 ? 'background:#D4FF3A;color:#0E0E0E' : 'color:#A3A39B') }; });
+    function heart(i) {
+      var on = !!self.state.saved[i];
+      return {
+        savedAria: on ? 'true' : 'false', heartFill: on ? 'currentColor' : 'none',
+        heartBtn: 'position:absolute;top:6px;right:6px;width:36px;height:36px;border:0;border-radius:999px;display:flex;align-items:center;justify-content:center;cursor:pointer;' + (on ? 'background:#D4FF3A;color:#0E0E0E' : 'background:rgba(14,14,14,.7);color:#EDEDE8'),
+        toggleSave: function () { var s = Object.assign({}, self.state.saved); s[i] = !s[i]; self.setState({ saved: s }); }
+      };
+    }
+    var tones = ['#3A332C', '#B9B0A2', '#2C363B'];
+    var raw = [
+      { t: 'Carhartt Detroit jacket', p: 310, s: 'L' },
+      { t: 'ზაფხულის კაბა', p: 35, s: 'M' },
+      { t: 'Levi’s 501 vintage', p: 120, s: 'W32' }
+    ];
+    var tick = raw.map(function (r) { return { text: r.t + ' — ' + r.p + ' ₾' }; });
+    return {
+      ticker: tick.concat(tick, tick, tick),
+      nav: nav,
+      items: raw.map(function (r, i) {
+        return Object.assign(heart(i), { title: r.t, price: r.p + ' ₾', size: r.s, photo: 'position:absolute;inset:0;background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + tones[i] });
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

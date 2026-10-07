@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Instagram post — top 10 under 50</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 432px; height: 540px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<div style="padding: 26px 24px 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: #D4FF3A">THIS WEEK</span>
+<span style="font-weight: 900; font-stretch: 125%; font-size: 52px; line-height: 0.9; letter-spacing: -0.05em">TOP 10</span>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 11px; border-radius: 4px; background: #D4FF3A; color: #0E0E0E; font-size: 28px; line-height: 1; font-weight: 800; transform: rotate(-4deg); box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4)"><span style="width: 7px; height: 7px; border-radius: 999px; background: #0E0E0E"></span>≤ 50 ₾</span>
+</div>
+
+<div style="flex: 1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; padding: 0 24px">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="10">
+<div style="{{t.style}}">
+<span style="position: absolute; left: 4px; top: 4px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; color: rgba(237, 237, 232, 0.7)">{{t.rank}}</span>
+<span style="position: absolute; left: 4px; bottom: 6px; padding: 2px 5px; border-radius: 2px; background: #EDEDE8; color: #0E0E0E; font-size: 11px; font-weight: 800; transform: rotate(-3deg)">{{t.p}}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px 24px">
+<span style="display: flex; align-items: flex-start; gap: 2px"><span style="font-weight: 900; font-stretch: 125%; font-size: 18px; letter-spacing: -0.04em">DEADSTOCK</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; color: #D4FF3A">.ge</span></span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A3A39B">swipe →</span>
+</div>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":432,"height":540}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var tones = ['#B9B0A2', '#3A332C', '#2C363B', '#7A6E60', '#4A2F2A', '#2F3B2E', '#6B5A4C', '#3D3A45', '#8C8172', '#1F2326'];
+    var prices = [25, 35, 40, 45, 45, 48, 50, 30, 20, 50];
+    return {
+      tiles: tones.map(function (c, i) {
+        return { rank: String(i + 1).padStart(2, '0'), p: prices[i] + ' ₾', style: 'position:relative;aspect-ratio:4/5;border-radius:3px;background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + c };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

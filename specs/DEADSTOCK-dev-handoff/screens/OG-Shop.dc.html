@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Link preview — shop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; width: 1200px; height: 630px; overflow: hidden; display: flex; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 52px 56px 48px">
+<div style="display: flex; align-items: flex-start; gap: 4px">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 30px; line-height: 1; letter-spacing: -0.04em">DEADSTOCK</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #D4FF3A">.ge</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="width: 120px; height: 120px; border-radius: 999px; background: radial-gradient(100% 100% at 30% 25%, rgba(255,255,255,.2), rgba(255,255,255,0) 60%), #C9A27A; box-shadow: 0 0 0 6px #0E0E0E, 0 0 0 9px #D4FF3A"></div>
+<span style="font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 72px; line-height: 80px; font-weight: 800">ძველი კარადა</span>
+<span style="font-size: 26px; line-height: 36px; color: #A3A39B">ვინტაჟი და სტრიტვეარი 90-იანებიდან</span>
+</div>
+<div style="display: flex; align-items: center; gap: 24px">
+<span style="padding: 8px 18px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; font-size: 22px; font-weight: 700">10 ნივთი</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #A3A39B">dzveli-karada.deadstock.ge</span>
+</div>
+</div>
+
+<div style="flex-shrink: 0; width: 470px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 8px 8px 8px 0">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="4">
+<div style="{{t.style}}">
+<span style="position: absolute; left: 14px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 10px; border-radius: 4px; background: #EDEDE8; color: #0E0E0E; font-size: 24px; line-height: 1; font-weight: 700; transform: rotate(-3deg); box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4)"><span style="width: 7px; height: 7px; border-radius: 999px; background: #0E0E0E"></span>{{t.price}}</span>
+</div>
+</sc-for>
+</div>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":630}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var tiles = [['#3A332C', '220 ₾'], ['#B9B0A2', '60 ₾'], ['#4A2F2A', '260 ₾'], ['#2C363B', '45 ₾']];
+    return {
+      tiles: tiles.map(function (t) {
+        return { price: t[1], style: 'position:relative;border-radius:4px;overflow:hidden;background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + t[0] };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

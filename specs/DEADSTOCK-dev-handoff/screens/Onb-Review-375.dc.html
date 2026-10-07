@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Onboarding 2 — price & size check</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; min-height: 1120px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<header style="display: flex; align-items: center; gap: 12px; padding: 10px 16px 10px 6px; border-bottom: 1px solid #2E2E2B">
+<a href="Onb-Import-375.dc.html" aria-label="უკან" title="უკან" style="flex-shrink: 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></a>
+<div role="progressbar" aria-label="ნაბიჯი 2 / 4" aria-valuemin="1" aria-valuemax="4" aria-valuenow="2" style="flex: 1; display: flex; gap: 6px"><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #2E2E2B"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #2E2E2B"></span></div>
+<span style="flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #A3A39B">2/4</span>
+</header>
+<main style="display: flex; flex-direction: column; gap: 16px; padding: 24px 16px 140px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #D4FF3A">12 ITEMS</span>
+<h1 style="margin: 0; font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 28px; line-height: 36px; font-weight: 800">ფასი, ზომა — ჩექი</h1>
+<div role="tablist" aria-label="ფილტრი" style="display: flex; gap: 6px; padding: 3px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<sc-for list="{{tabs}}" as="tb" hint-placeholder-count="2">
+<button type="button" role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.style}}">{{tb.label}}<span style="{{tb.countStyle}}">{{tb.n}}</span></button>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="5">
+<div style="{{r.card}}">
+<div style="{{r.thumb}}"></div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<span style="display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 14px; font-weight: 600"><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{r.title}}</span><sc-if value="{{r.auto}}" hint-placeholder-val="{{ true }}"><span title="კაფშენიდან" style="flex-shrink: 0; color: #D4FF3A"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span></sc-if></span>
+<div style="display: flex; align-items: center; gap: 8px">
+<label style="{{r.priceBox}}"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">ფასი</span><input inputmode="numeric" value="{{r.price}}" placeholder="?" style="width: 44px; min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 800; text-align: right"><span style="font-weight: 800">₾</span></label>
+<label style="{{r.sizeBox}}"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">ზომა</span><input value="{{r.size}}" placeholder="ზომა" style="width: 54px; min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500"></label>
+<span title="{{r.catName}}" role="img" aria-label="{{r.catName}}" style="flex-shrink: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid #2E2E2B; border-radius: 999px; color: #A3A39B"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{r.catIcon}}"></path></svg></span>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+</main>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; align-items: center; gap: 12px; padding: 12px 16px 28px; background: rgba(14, 14, 14, 0.94); border-top: 1px solid #2E2E2B">
+<span style="display: flex; flex-direction: column; gap: 2px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A3A39B"><span style="{{fixStyle}}">{{fixText}}</span></span>
+<a href="Onb-Shop-375.dc.html" class="ds-btn ds-p" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.04em">NEXT<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":1120}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'fix' }; }
+  renderVals() {
+    var self = this;
+    var CAT = {
+      jacket: ['ქურთუკი', 'M8 3 4 6v15h5v-9M16 3l4 3v15h-5v-9M8 3l4 4 4-4M12 7v14'],
+      top: ['მაისური', 'M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3c0 2-2 3-4 3S8 5 8 3z'],
+      skirt: ['ქვედაბოლო', 'M7 5h10l3 15H4zM7 8h10'],
+      shoes: ['ფეხსაცმელი', 'M3 18v-5l5-6 3 3 3-1 7 6v3zM3 18h18M8 13l1 1M11 12l1 1'],
+      dress: ['კაბა', 'M9 3h6l-1 5 5 13H5l5-13zM10 3l2 3 2-3'],
+      acc: ['აქსესუარი', 'M2 10h20M4 10a3 3 0 1 0 6 0M14 10a3 3 0 1 0 6 0']
+    };
+    var tones = ['#3A332C', '#B9B0A2', '#7A6E60', '#4A2F2A', '#2F3B2E', '#6B5A4C', '#8C8172'];
+    var raw = [
+      { t: 'ტყავის ქამარი', p: null, s: '', c: 'acc' },
+      { t: 'Wrangler denim jacket', p: 140, s: '', c: 'jacket' },
+      { t: 'Pepe Jeans leather jacket', p: 220, s: 'XS', c: 'jacket' },
+      { t: 'მატყლის სვიტერი', p: 60, s: 'S', c: 'top' },
+      { t: 'Plaid mini skirt', p: 45, s: 'XS', c: 'skirt' },
+      { t: 'Dr. Martens 1460', p: 260, s: '39', c: 'shoes' },
+      { t: 'ზაფხულის კაბა', p: 35, s: 'M', c: 'dress' }
+    ];
+    var fix = raw.filter(function (r) { return r.p == null || !r.s; }).length;
+    var tab = self.state.tab;
+    var list = raw.filter(function (r) { return tab === 'all' || r.p == null || !r.s; });
+    var rows = list.map(function (r) {
+      var i = raw.indexOf(r);
+      var noP = r.p == null, noS = !r.s;
+      var need = noP || noS;
+      return {
+        title: r.t, auto: !need, price: r.p == null ? '' : String(r.p), size: r.s,
+        catName: CAT[r.c][0], catIcon: CAT[r.c][1],
+        card: 'display:flex;gap:12px;padding:10px;border-radius:12px;background:#171716;border:1px solid ' + (need ? '#D4FF3A' : '#2E2E2B'),
+        thumb: 'flex-shrink:0;width:76px;aspect-ratio:4/5;border-radius:4px;background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + tones[i % tones.length],
+        priceBox: 'position:relative;display:flex;align-items:center;gap:2px;height:40px;padding:0 10px;border-radius:4px;transform:rotate(-2deg);' + (noP ? 'background:transparent;color:#D4FF3A;box-shadow:inset 0 0 0 2px #D4FF3A' : 'background:#EDEDE8;color:#0E0E0E'),
+        sizeBox: 'position:relative;display:flex;align-items:center;height:40px;padding:0 12px;border-radius:999px;' + (noS ? 'border:1px dashed #D4FF3A;color:#D4FF3A' : 'border:1px solid #2E2E2B;color:#EDEDE8')
+      };
+    });
+    var tabBase = 'flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:40px;border:0;border-radius:999px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;';
+    var tabs = [['fix', 'შესავსები', fix], ['all', 'ყველა', raw.length]].map(function (t) {
+      var on = tab === t[0];
+      return { label: t[1], n: String(t[2]), on: on ? 'true' : 'false', pick: function () { self.setState({ tab: t[0] }); },
+        style: tabBase + (on ? 'background:#EDEDE8;color:#0E0E0E' : 'background:transparent;color:#A3A39B'),
+        countStyle: "font-family:'JetBrains Mono',monospace;font-size:11px;padding:1px 6px;border-radius:999px;" + (on ? 'background:#0E0E0E;color:#EDEDE8' : 'background:#222220;color:#A3A39B') };
+    });
+    return {
+      tabs: tabs, rows: rows,
+      fixText: fix ? fix + ' TO FIX' : 'ALL GOOD',
+      fixStyle: 'font-weight:700;color:' + (fix ? '#D4FF3A' : '#EDEDE8')
+    };
+  }
+}
+</script>
+</body>
+</html>

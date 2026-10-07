@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Admin — moderation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+.ds-row:hover{background:#171716}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; min-height: 1100px; display: flex; flex-wrap: wrap; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<aside style="flex: 0 0 240px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px; padding: 24px 16px; border-right: 1px solid #2E2E2B">
+<span style="display: flex; align-items: center; gap: 8px; padding: 0 8px"><span style="font-weight: 900; font-stretch: 125%; font-size: 18px; letter-spacing: -0.04em">DEADSTOCK</span><span style="padding: 2px 6px; border: 1px solid #FF6B4A; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: #FF6B4A">ADMIN</span></span>
+<nav aria-label="ადმინი" style="display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{side}}" as="n" hint-placeholder-count="4">
+<a href="Admin-1440.dc.html" aria-current="{{n.current}}" style="{{n.style}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{n.icon}}"></path></svg><span style="flex: 1">{{n.label}}</span><span style="{{n.countStyle}}">{{n.count}}</span></a>
+</sc-for>
+</nav>
+</aside>
+
+<main style="flex: 1 1 640px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; padding: 32px 40px 64px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">MODERATION</span><h1 style="margin: 0; font-size: 34px; font-weight: 800">რეპორტები</h1></div>
+<div role="tablist" aria-label="ფილტრი" style="display: flex; gap: 4px; padding: 3px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<sc-for list="{{tabs}}" as="tb" hint-placeholder-count="3">
+<button type="button" role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.style}}">{{tb.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+<sc-for list="{{kpis}}" as="k" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border: 1px solid #2E2E2B; border-radius: 12px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">{{k.label}}</span><span style="{{k.style}}">{{k.value}}</span></div>
+</sc-for>
+</div>
+
+<div style="overflow-x: auto; border: 1px solid #2E2E2B; border-radius: 12px">
+<table style="width: 100%; min-width: 860px; border-collapse: collapse; font-size: 14px">
+<thead><tr style="text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #A3A39B">
+<th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #2E2E2B">ITEM</th>
+<th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #2E2E2B">SHOP</th>
+<th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #2E2E2B">REASON</th>
+<th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #2E2E2B">#</th>
+<th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #2E2E2B">AGE</th>
+<th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #2E2E2B; text-align: right">ACTION</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<tr class="ds-row" style="{{r.rowStyle}}">
+<td style="padding: 12px 16px; border-bottom: 1px solid #2E2E2B"><span style="display: flex; align-items: center; gap: 12px"><span style="{{r.thumb}}"></span><span style="font-weight: 600">{{r.title}}</span></span></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #2E2E2B; color: #A3A39B">{{r.shop}}</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #2E2E2B"><span style="{{r.reasonStyle}}">{{r.reason}}</span></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #2E2E2B; font-family: 'JetBrains Mono', monospace; font-weight: 700">{{r.n}}</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #2E2E2B; font-family: 'JetBrains Mono', monospace; color: #A3A39B">{{r.age}}</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #2E2E2B"><span style="display: flex; justify-content: flex-end; gap: 6px">
+<sc-if value="{{r.open}}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{r.hide}}" style="height: 36px; padding: 0 14px; border: 0; border-radius: 999px; background: #FF6B4A; color: #0E0E0E; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; cursor: pointer">HIDE</button>
+<button type="button" onClick="{{r.dismiss}}" style="height: 36px; padding: 0 14px; border: 1px solid #2E2E2B; border-radius: 999px; background: transparent; color: #EDEDE8; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; cursor: pointer">OK</button>
+<button type="button" onClick="{{r.ban}}" aria-label="მაღაზიის დაბლოკვა" title="მაღაზიის დაბლოკვა" style="width: 36px; height: 36px; border: 1px solid #FF6B4A; border-radius: 999px; background: transparent; color: #FF6B4A; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM5.6 5.6l12.8 12.8"></path></svg></button>
+</sc-if>
+<sc-if value="{{r.closed}}" hint-placeholder-val="{{ false }}"><span style="{{r.doneStyle}}">{{r.done}}</span></sc-if>
+</span></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</main>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 0, done: {} }; }
+  renderVals() {
+    var self = this, s = this.state;
+    var RS = {
+      fake: ['ყალბი', '#FF6B4A'], prepay: ['წინასწარ გადახდა', '#FF6B4A'], sold: ['უკვე გაყიდულია', '#A3A39B'], price: ['ფასი', '#A3A39B'], rude: ['შეურაცხყოფა', '#D4FF3A']
+    };
+    var raw = [
+      ['Hi-top sneakers, „limited“', 'Sneaker Spot', 'fake', 7, '2სთ', '#4A2F2A'],
+      ['iPhone 13 — 300 ₾', 'Mezzanine 7', 'prepay', 4, '5სთ', '#1F2326'],
+      ['Carhartt Detroit jacket', 'Garage 41', 'sold', 3, '1დ', '#3A332C'],
+      ['დიზაინერული ქამარი', 'Vinyl Basement', 'fake', 3, '1დ', '#6B5A4C'],
+      ['ზაფხულის კაბა', 'ფარდული', 'price', 1, '2დ', '#B9B0A2'],
+      ['Dickies 874 work pants', 'Second Wind', 'rude', 1, '3დ', '#2F3B2E']
+    ];
+    var open = 0;
+    var rows = raw.map(function (r, i) {
+      var d = s.done[i];
+      if (!d) open++;
+      var rs = RS[r[2]];
+      function act(v) { return function () { var o = Object.assign({}, s.done); o[i] = v; self.setState({ done: o }); }; }
+      return {
+        title: r[0], shop: r[1], reason: rs[0], n: String(r[3]), age: r[4],
+        thumb: 'flex-shrink:0;width:36px;height:45px;border-radius:3px;background:' + r[5],
+        reasonStyle: 'display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid ' + rs[1] + ';color:' + rs[1],
+        open: !d, closed: !!d,
+        done: d === 'hide' ? 'HIDDEN' : d === 'ban' ? 'SHOP BANNED' : 'DISMISSED',
+        doneStyle: "font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:" + (d === 'ok' ? '#A3A39B' : '#FF6B4A'),
+        rowStyle: d ? 'opacity:.5' : '',
+        hide: act('hide'), dismiss: act('ok'), ban: act('ban')
+      };
+    });
+    var tabs = ['ღია', 'ჩემი', 'ყველა'].map(function (l, i) {
+      var on = s.tab === i;
+      return { label: l, on: on ? 'true' : 'false', pick: function () { self.setState({ tab: i }); },
+        style: 'height:40px;padding:0 18px;border:0;border-radius:999px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;' + (on ? 'background:#EDEDE8;color:#0E0E0E' : 'background:transparent;color:#A3A39B') };
+    });
+    var navBase = 'display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600;';
+    var side = [['რეპორტები', String(open), 'M5 21V4M5 4h11l-2 4 2 4H5'], ['ახალი მაღაზიები', '3', 'M4 9h16l-1.5-5h-13zM5 9v11h14V9'], ['ავტო-ფლაგები', '12', 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z'], ['ბლოკირებული', '2', 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM5.6 5.6l12.8 12.8']].map(function (n, i) {
+      var on = i === 0;
+      return { label: n[0], count: n[1], icon: n[2], current: on ? 'page' : 'false',
+        style: navBase + (on ? 'background:#171716;color:#EDEDE8' : 'color:#A3A39B'),
+        countStyle: "font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;" + (on && open ? 'color:#FF6B4A' : 'color:#6E6E68') };
+    });
+    var big = "font-weight:900;font-stretch:125%;font-size:30px;letter-spacing:-0.04em;";
+    return {
+      side: side, tabs: tabs, rows: rows,
+      kpis: [['OPEN', String(open), big + 'color:' + (open ? '#FF6B4A' : '#EDEDE8')], ['MEDIAN RESPONSE', '3.2სთ', big], ['HIDDEN · 7D', '14', big], ['SHOPS LIVE', '38', big + 'color:#D4FF3A']].map(function (k) { return { label: k[0], value: k[1], style: k[2] }; })
+    };
+  }
+}
+</script>
+</body>
+</html>

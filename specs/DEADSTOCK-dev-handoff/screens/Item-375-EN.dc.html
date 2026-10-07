@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Item page — mobile — EN</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+.ds-main{transition:background .35s ease}
+@media (prefers-reduced-motion:reduce){.ds-btn,.ds-main{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; width: 375px; min-height: 1900px; overflow: hidden; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 8px 8px 4px; border-bottom: 1px solid #2E2E2B">
+<a href="{{d.shopHref}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 8px; color: #EDEDE8; text-decoration: none; font-size: 15px; font-weight: 600; min-width: 0">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+<span style="flex-shrink: 0; width: 22px; height: 22px; border-radius: 999px; {{d.avatar}}"></span>
+{{d.shop}}</a>
+<div style="display: flex; align-items: center">
+<a href="Report-375.dc.html" aria-label="Report" title="Report" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #A3A39B"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"></path></svg></a>
+<button type="button" aria-label="Share" title="Share" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: transparent; color: #EDEDE8">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"></path><path d="M12 3v13"></path><path d="m7 8 5-5 5 5"></path></svg></button>
+</div>
+</header>
+
+<div class="ds-main" style="position: relative; width: 375px; aspect-ratio: 4 / 5; {{current.style}}">
+<sc-if value="{{d.video}}" hint-placeholder-val="{{ false }}">
+<a href="https://www.instagram.com/" aria-label="Video on Instagram" title="Video on Instagram" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 999px; background: rgba(14, 14, 14, 0.75); display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="#EDEDE8" aria-hidden="true"><path d="M7 4v16l13-8z"></path></svg></a>
+</sc-if>
+<sc-if value="{{d.sold}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%) rotate(-10deg); padding: 8px 24px; border: 3px solid #EDEDE8; border-radius: 6px; background: rgba(14, 14, 14, 0.35); color: #EDEDE8; font-size: 44px; line-height: 1; font-weight: 900; letter-spacing: 0.06em; white-space: nowrap">SOLD</span>
+</sc-if>
+<sc-if value="{{d.reserved}}" hint-placeholder-val="{{ false }}">
+<span title="On hold" role="img" aria-label="On hold" style="position: absolute; left: 12px; top: 12px; width: 32px; height: 32px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px rgba(14, 14, 14, 0.5)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12"></path><path d="M7 2v4c0 3 5 4 5 6s-5 3-5 6v4"></path><path d="M17 2v4c0 3-5 4-5 6s5 3 5 6v4"></path></svg></span>
+</sc-if>
+<sc-if value="{{multi}}" hint-placeholder-val="{{ true }}">
+<span style="position: absolute; right: 12px; top: 12px; padding: 5px 10px; border-radius: 999px; background: rgba(14, 14, 14, 0.8); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500">{{current.counter}}</span>
+<button type="button" aria-label="Previous photo" onClick="{{prev}}" style="position: absolute; left: 0; top: 0; bottom: 0; width: 30%; border: 0; background: transparent; cursor: pointer"></button>
+<button type="button" aria-label="Next photo" onClick="{{next}}" style="position: absolute; right: 0; top: 0; bottom: 0; width: 30%; border: 0; background: transparent; cursor: pointer"></button>
+</sc-if>
+<span title="{{d.priceTitle}}" style="position: absolute; left: 14px; bottom: 18px; display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 11px; border-radius: 4px; font-size: 28px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4); {{d.priceStyle}}"><span style="width: 7px; height: 7px; border-radius: 999px; background: #0E0E0E"></span>{{d.priceText}}</span>
+</div>
+<sc-if value="{{multi}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; justify-content: center; gap: 6px; padding: 12px 0 0">
+<sc-for list="{{dots}}" as="dt" hint-placeholder-count="3">
+<span style="{{dt.style}}"></span>
+</sc-for>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 18px 16px 0">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h1 style="margin: 0; font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 24px; line-height: 32px; font-weight: 800">{{d.title}}</h1>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="3">
+<span title="{{c.title}}" style="{{c.style}}"><sc-if value="{{c.hasIcon}}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{c.icon}}"></path></svg></sc-if>{{c.label}}</span>
+</sc-for>
+<span title="Posted" style="display: inline-flex; align-items: center; gap: 5px; margin-left: 2px; font-family: 'JetBrains Mono', 'Noto Sans Georgian', monospace; font-size: 12px; color: #A3A39B">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+{{d.posted}}</span>
+</div>
+</div>
+
+<div style="display: flex; gap: 10px">
+<sc-if value="{{d.notSold}}" hint-placeholder-val="{{ true }}">
+<a href="https://www.instagram.com/" class="ds-btn ds-p" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-size: 18px; font-weight: 800; letter-spacing: 0.02em">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"></path><path d="M22 2 15 22l-4-9-9-4z"></path></svg>
+DM</a>
+</sc-if>
+<sc-if value="{{d.sold}}" hint-placeholder-val="{{ false }}">
+<a href="{{d.shopHref}}" class="ds-btn ds-s" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; border: 1px solid #EDEDE8; color: #EDEDE8; text-decoration: none; font-size: 15px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.5-5h-13z"></path><path d="M5 9v11h14V9"></path><path d="M10 20v-6h4v6"></path></svg>
+More items →</a>
+</sc-if>
+<button type="button" class="ds-btn" aria-label="Save" title="Save" aria-pressed="{{heartAria}}" onClick="{{toggleHeart}}" style="{{heartBtn}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="{{heartFill}}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></button>
+<a href="https://www.instagram.com/" class="ds-btn ds-s" aria-label="Original post" title="Original post" style="flex-shrink: 0; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid #2E2E2B; color: #EDEDE8">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+
+<figure style="position: relative; margin: 0; padding: 16px 16px 16px 46px; border-radius: 12px; background: #171716">
+<svg style="position: absolute; left: 16px; top: 18px" width="18" height="18" viewBox="0 0 24 24" fill="#6E6E68" aria-hidden="true"><path d="M4 18v-5a7 7 0 0 1 7-7v3a4 4 0 0 0-4 4h4v5zM13 18v-5a7 7 0 0 1 7-7v3a4 4 0 0 0-4 4h4v5z"></path></svg>
+<p aria-label="Post caption" style="margin: 0; font-size: 15px; line-height: 23px; white-space: pre-line">{{d.caption}}</p>
+</figure>
+
+<a href="{{d.shopHref}}" style="display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid #2E2E2B; border-radius: 12px; background: #171716; color: #EDEDE8; text-decoration: none">
+<span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 999px; {{d.avatar}}"></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px">
+<span style="font-size: 15px; font-weight: 700">{{d.shop}}</span>
+<span style="display: flex; align-items: center; gap: 5px; font-size: 12px; color: #A3A39B"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>{{d.addr}}</span>
+</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4FF3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+</a>
+</div>
+
+<footer style="margin-top: 48px; padding: 28px 16px 48px; border-top: 1px solid #2E2E2B">
+<a href="Home-375-EN.dc.html" style="font-weight: 900; font-stretch: 125%; font-size: 30px; line-height: 0.85; letter-spacing: -0.04em; color: #222220; text-decoration: none">DEADSTOCK</a>
+</footer>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"variant":{"editor":"enum","options":["available","reserved","sold","noPrice"],"default":"available"},"$preview":{"width":375,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { i: 0, saved: false }; }
+  renderVals() {
+    var self = this;
+    var ICON = {
+      jacket: 'M8 3 4 6v15h5v-9M16 3l4 3v15h-5v-9M8 3l4 4 4-4M12 7v14',
+      dress: 'M9 3h6l-1 5 5 13H5l5-13zM10 3l2 3 2-3',
+      jeans: 'M6 3h12l1 18h-5l-2-11-2 11H5zM6 7h12M9 7v2M15 7v2',
+      bag: 'M5 8h14l-1 13H6zM9 8V6a3 3 0 0 1 6 0v2',
+      spark: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z'
+    };
+    var D = {
+      reserved: { title: 'Pepe Jeans leather jacket', price: 220, size: 'XS', cond: '', brand: 'Pepe Jeans', cat: 'Jacket', icon: 'jacket', status: 'reserved', posted: '2h', shop: 'ძველი კარადა', color: '#C9A27A', addr: 'Vazha-Pshavela 24', caption: 'Pepe Jeans leather jacket\n\nSize XS\nPrice: 220\nRESERVED', tones: ['#3A332C', '#4A2F2A', '#5B5248', '#B9B0A2', '#2C363B'] },
+      available: { title: 'ზაფხულის კაბა', price: 35, size: 'M', cond: '', brand: '', cat: 'Dress', icon: 'dress', status: 'available', posted: 'yesterday', shop: 'ფარდული', color: '#B07A6E', addr: 'Abashidze 10', caption: 'ზაფხულის კაბა\nზომა: M\nფასი: 35 ლარი', tones: ['#B9B0A2', '#7A6E60', '#3A332C'] },
+      sold: { title: 'Levi’s 501 vintage', price: 120, size: 'W32 L32', cond: '9/10', brand: 'Levi’s', cat: 'Jeans', icon: 'jeans', status: 'sold', posted: '5d', shop: 'ძველი კარადა', color: '#C9A27A', addr: 'Vazha-Pshavela 24', caption: 'Levi’s 501 vintage\nW32 L32 · 9/10\n120₾\nგაიყიდა', tones: ['#2C363B', '#3D3A45', '#5B5248', '#1F2326'] },
+      noPrice: { title: 'ნატურალური ტყავის ჩანთა, ვინტაჟი', price: null, size: '', cond: 'Good', brand: '', cat: 'Bag', icon: 'bag', status: 'available', posted: '3h', shop: 'ფარდული', color: '#B07A6E', addr: 'Abashidze 10', caption: 'ნატურალური ტყავის ჩანთა, ვინტაჟი\nმდგომარეობა: კარგი\nფასი — დირექტში\n#vintage #tbilisi', tones: ['#7A6E60'], video: true }
+    };
+    var v = D[this.props.variant ?? 'available'] || D.available;
+    var sold = v.status === 'sold';
+    var tones = v.tones;
+    var n = tones.length;
+    var i = Math.min(this.state.i, n - 1);
+    var chipBase = 'display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid #2E2E2B;border-radius:999px;font-size:13px;box-sizing:border-box;';
+    var chips = [];
+    if (v.size) chips.push({ title: 'Size', label: v.size, style: chipBase + "font-family:'JetBrains Mono','Noto Sans Georgian',monospace;font-weight:500;color:#EDEDE8", hasIcon: false, icon: '' });
+    if (v.cond) chips.push({ title: 'Condition', label: v.cond, style: chipBase + 'color:#EDEDE8', hasIcon: true, icon: ICON.spark });
+    if (v.brand) chips.push({ title: 'Brand', label: v.brand, style: chipBase + 'font-weight:700;color:#EDEDE8', hasIcon: false, icon: '' });
+    chips.push({ title: 'Category', label: v.cat, style: chipBase + 'color:#A3A39B', hasIcon: true, icon: ICON[v.icon] });
+    function photo(t) {
+      return 'background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + t + (sold ? ';filter:grayscale(1) brightness(.6)' : '');
+    }
+    var sv = this.state.saved, self = this;
+    var heartBase = 'flex-shrink:0;width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:999px;cursor:pointer;';
+    return {
+      heartAria: sv ? 'true' : 'false', heartFill: sv ? 'currentColor' : 'none',
+      heartBtn: heartBase + (sv ? 'border:1px solid #D4FF3A;background:#D4FF3A;color:#0E0E0E' : 'border:1px solid #2E2E2B;background:transparent;color:#EDEDE8'),
+      toggleHeart: function () { self.setState({ saved: !sv }); },
+      d: {
+        title: v.title, posted: v.posted, shop: v.shop, addr: v.addr, caption: v.caption,
+        shopHref: 'Shop-375-EN.dc.html', avatar: 'background:' + v.color,
+        reserved: v.status === 'reserved', sold: sold, notSold: !sold, video: !!v.video,
+        priceText: v.price != null ? v.price + ' ₾' : '? ₾',
+        priceTitle: v.price != null ? 'Price' : 'Price in DM',
+        priceStyle: sold ? 'background:#A3A39B;color:#0E0E0E;text-decoration:line-through' : 'background:#EDEDE8;color:#0E0E0E'
+      },
+      chips: chips,
+      multi: n > 1,
+      dots: tones.map(function (t, k) {
+        return { style: 'display:block;height:6px;border-radius:999px;transition:width .2s ease;' + (k === i ? 'width:18px;background:#D4FF3A' : 'width:6px;background:#2E2E2B') };
+      }),
+      current: { style: photo(tones[i]), counter: (i + 1) + ' / ' + n },
+      prev: function () { self.setState({ i: (i - 1 + n) % n }); },
+      next: function () { self.setState({ i: (i + 1) % n }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

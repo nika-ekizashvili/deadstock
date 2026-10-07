@@ -4,5 +4,5 @@ import { clearSession } from "@/lib/session";
 
 export async function POST() {
   await clearSession();
-  return NextResponse.redirect(new URL("/", env().APP_URL), 303);
+  return NextResponse.redirect(new URL("/sell", env().APP_URL), 303);
 }

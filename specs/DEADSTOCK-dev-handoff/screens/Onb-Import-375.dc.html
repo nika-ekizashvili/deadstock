@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Onboarding 1 — pick posts</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; min-height: 1060px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<header style="display: flex; align-items: center; gap: 12px; padding: 10px 16px 10px 6px; border-bottom: 1px solid #2E2E2B">
+<a href="SignIn-375.dc.html" aria-label="უკან" title="უკან" style="flex-shrink: 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></a>
+<div role="progressbar" aria-label="ნაბიჯი 1 / 4" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1" style="flex: 1; display: flex; gap: 6px"><span style="flex: 1; height: 4px; border-radius: 999px; background: #D4FF3A"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #2E2E2B"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #2E2E2B"></span><span style="flex: 1; height: 4px; border-radius: 999px; background: #2E2E2B"></span></div>
+<span style="flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #A3A39B">1/4</span>
+</header>
+<main style="display: flex; flex-direction: column; gap: 14px; padding: 24px 16px 140px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #D4FF3A">@DZVELI.KARADA · 24 POSTS</span>
+<h1 style="margin: 0; font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 28px; line-height: 36px; font-weight: 800">რა იყიდება?</h1>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 4px">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #A3A39B"><span style="width: 18px; height: 18px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; display: inline-flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>{{selectedN}}</span>
+<button type="button" class="ds-btn ds-s" onClick="{{toggleAll}}" style="height: 40px; padding: 0 16px; border: 1px solid #2E2E2B; border-radius: 999px; background: transparent; color: #EDEDE8; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; cursor: pointer">{{allText}}</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px">
+<sc-for list="{{posts}}" as="p" hint-placeholder-count="15">
+<button type="button" aria-pressed="{{p.on}}" aria-label="{{p.aria}}" onClick="{{p.toggle}}" style="{{p.tile}}">
+<sc-if value="{{p.sold}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-10deg); padding: 2px 7px; border: 2px solid #EDEDE8; border-radius: 3px; color: #EDEDE8; font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.06em">SOLD</span></sc-if>
+<sc-if value="{{p.video}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; left: 6px; top: 6px; color: #EDEDE8"><svg width="12" height="12" viewBox="0 0 24 24" fill="#EDEDE8" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4v16l13-8z"></path></svg></span></sc-if>
+<span style="{{p.check}}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>
+<sc-if value="{{p.hasPrice}}" hint-placeholder-val="{{ true }}"><span style="position: absolute; left: 5px; bottom: 6px; padding: 2px 5px; border-radius: 2px; background: #EDEDE8; color: #0E0E0E; font-family: 'Archivo', sans-serif; font-size: 10px; font-weight: 800; transform: rotate(-3deg)">{{p.price}}</span></sc-if>
+</button>
+</sc-for>
+</div>
+</main>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; align-items: center; gap: 12px; padding: 12px 16px 28px; background: rgba(14, 14, 14, 0.94); border-top: 1px solid #2E2E2B">
+<a href="Onb-Review-375.dc.html" class="ds-btn ds-p" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.04em">{{ctaText}}<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":1060}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { off: { 2: true, 7: true, 13: true } }; }
+  renderVals() {
+    var self = this;
+    var tones = ['#3A332C', '#B9B0A2', '#2C363B', '#7A6E60', '#4A2F2A', '#2F3B2E', '#6B5A4C', '#1F2326', '#8C8172', '#3D3A45', '#5B5248', '#A39783', '#55443A', '#2A2E36', '#77685A'];
+    var prices = [220, 60, null, 45, 260, 35, null, 140, 50, null, 70, 25, 95, 180, 40];
+    var sold = { 2: true, 7: true, 13: true };
+    var video = { 4: true, 10: true };
+    var n = 0;
+    var posts = tones.map(function (c, i) {
+      var on = !self.state.off[i];
+      if (on) n++;
+      return {
+        on: on ? 'true' : 'false', sold: !!sold[i], video: !!video[i],
+        hasPrice: prices[i] != null && !sold[i], price: prices[i] + ' ₾',
+        aria: 'პოსტი ' + (i + 1) + (on ? ' — არჩეულია' : ''),
+        tile: 'position:relative;aspect-ratio:1/1;padding:0;border:0;border-radius:2px;cursor:pointer;overflow:hidden;background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + c + ';' + (on ? 'box-shadow:inset 0 0 0 3px #D4FF3A' : 'filter:grayscale(1) brightness(.5)'),
+        check: 'position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:999px;display:flex;align-items:center;justify-content:center;' + (on ? 'background:#D4FF3A;color:#0E0E0E' : 'background:rgba(14,14,14,.5);color:transparent;box-shadow:inset 0 0 0 2px #EDEDE8'),
+        toggle: function () { var o = Object.assign({}, self.state.off); o[i] = !o[i]; self.setState({ off: o }); }
+      };
+    });
+    var all = n === tones.length;
+    return {
+      posts: posts,
+      selectedN: n + ' / ' + tones.length,
+      allText: all ? 'NONE' : 'ALL',
+      toggleAll: function () { var o = {}; if (!all) { } else { tones.forEach(function (c, i) { o[i] = true; }); } self.setState({ off: o }); },
+      ctaText: n + ' → NEXT'
+    };
+  }
+}
+</script>
+</body>
+</html>

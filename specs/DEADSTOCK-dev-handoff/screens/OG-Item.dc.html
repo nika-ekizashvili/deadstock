@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Link preview — item</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; width: 1200px; height: 630px; overflow: hidden; display: flex; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<div style="position: relative; flex-shrink: 0; width: 504px; height: 630px; background: radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), {{photo}}">
+<span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: rgba(237, 237, 232, 0.3)">FIRST PHOTO · 4:5</span>
+<sc-if value="{{reserved}}" hint-placeholder-val="{{ true }}">
+<span role="img" aria-label="დაჯავშნილია" style="position: absolute; top: 28px; left: 28px; width: 64px; height: 64px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 6px rgba(14, 14, 14, 0.5)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12"></path><path d="M7 2v4c0 3 5 4 5 6s-5 3-5 6v4"></path><path d="M17 2v4c0 3-5 4-5 6s5 3 5 6v4"></path></svg></span>
+</sc-if>
+</div>
+
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 52px 56px 48px">
+<div style="display: flex; align-items: flex-start; gap: 4px">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 30px; line-height: 1; letter-spacing: -0.04em">DEADSTOCK</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #D4FF3A">.ge</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 28px">
+<span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 54px; line-height: 60px; font-weight: 800; letter-spacing: -0.01em">{{title}}</span>
+<div style="display: flex; align-items: center; gap: 20px">
+<span style="display: inline-flex; align-items: center; gap: 14px; padding: 12px 22px 12px 16px; border-radius: 6px; background: #EDEDE8; color: #0E0E0E; font-size: 52px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; transform: rotate(-3deg); box-shadow: 0 4px 0 rgba(0, 0, 0, 0.45)"><span style="width: 12px; height: 12px; border-radius: 999px; background: #0E0E0E"></span>{{price}}</span>
+<span style="padding: 6px 16px; border: 2px solid #2E2E2B; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 500">{{size}}</span>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 2px solid #2E2E2B">
+<span style="display: flex; align-items: center; gap: 14px; font-size: 24px; font-weight: 700">
+<span style="width: 40px; height: 40px; border-radius: 999px; background: {{shopColor}}; box-shadow: 0 0 0 3px #0E0E0E, 0 0 0 5px #D4FF3A"></span>{{shop}}</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #A3A39B">{{domain}}</span>
+</div>
+</div>
+
+<div style="position: absolute; left: 504px; top: 0; bottom: 0; width: 8px; background: #D4FF3A"></div>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":630}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      title: 'Pepe Jeans leather jacket',
+      price: '220 ₾',
+      size: 'XS',
+      reserved: true,
+      shop: 'ძველი კარადა',
+      shopColor: '#C9A27A',
+      domain: 'dzveli-karada.deadstock.ge',
+      photo: '#3A332C'
+    };
+  }
+}
+</script>
+</body>
+</html>

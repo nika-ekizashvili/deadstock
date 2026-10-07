@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search results — mobile — EN</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; min-height: 1300px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<header style="display: flex; flex-direction: column; gap: 12px; padding: 10px 16px 12px; border-bottom: 1px solid #2E2E2B">
+<div style="display: flex; align-items: center; gap: 6px">
+<a href="Home-375-EN.dc.html" aria-label="Back" title="Back" style="flex-shrink: 0; width: 44px; height: 44px; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></a>
+<label style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 6px 0 16px; background: #171716; border: 1px solid #D4FF3A; border-radius: 999px">
+<span style="color: #A3A39B"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14zM20 20l-3.5-3.5"></path></svg></span>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search</span><input type="search" value="leather" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #EDEDE8; font-family: inherit; font-size: 16px">
+<a href="Home-375-EN.dc.html" aria-label="Clear" title="Clear" style="flex-shrink: 0; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #222220; color: #EDEDE8"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></a>
+</label>
+</div>
+<div style="display: flex; gap: 8px; overflow-x: auto; margin: 0 -16px; padding: 0 16px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="4">
+<button type="button" aria-pressed="{{c.on}}" onClick="{{c.toggle}}" style="{{c.style}}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{c.icon}}"></path></svg>{{c.label}}</button>
+</sc-for>
+</div>
+</header>
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px">
+<span style="display: flex; align-items: baseline; gap: 8px"><span style="font-weight: 900; font-stretch: 125%; font-size: 28px; letter-spacing: -0.04em">{{count}}</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #A3A39B">ITEMS</span></span>
+<button type="button" class="ds-btn" title="Alert me on new" aria-pressed="{{alertAria}}" onClick="{{toggleAlert}}" style="{{alertBtn}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="{{alertFill}}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"></path></svg>{{alertText}}</button>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 12px; padding: 0 16px 130px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="6">
+<div style="position: relative; min-width: 0">
+<a href="Item-375-EN.dc.html" class="ds-card" style="display: flex; flex-direction: column; gap: 10px; min-width: 0; color: #EDEDE8; text-decoration: none">
+<div style="position: relative; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; background: #171716">
+<div style="{{it.photo}}"></div>
+<sc-if value="{{it.boost}}" hint-placeholder-val="{{ false }}"><span title="BOOST" role="img" aria-label="BOOST" style="position: absolute; right: 8px; bottom: 10px; width: 24px; height: 24px; border-radius: 6px; background: #D4FF3A; color: #0E0E0E; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></span></sc-if>
+<span style="{{it.tagStyle}}"><span style="width: 5px; height: 5px; border-radius: 999px; background: #0E0E0E"></span>{{it.price}}</span>
+</div>
+<span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; line-height: 18px; font-weight: 500"><mark style="background: transparent; color: #D4FF3A">{{it.hit}}</mark>{{it.rest}}</span>
+<span style="display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 12px; color: #A3A39B"><span style="flex-shrink: 0; padding: 1px 7px; border: 1px solid #2E2E2B; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #EDEDE8">{{it.size}}</span><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{it.shop}}</span></span>
+</a>
+<a href="Auth-375-EN.dc.html" aria-label="Save" title="Save" style="position: absolute; top: 6px; right: 6px; width: 36px; height: 36px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(14, 14, 14, 0.7); color: #EDEDE8"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></a>
+</div>
+</sc-for>
+</div>
+<nav aria-label="Menu" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; justify-content: space-around; padding: 8px 8px 26px; background: rgba(14, 14, 14, 0.94); border-top: 1px solid #2E2E2B">
+<sc-for list="{{nav}}" as="tb" hint-placeholder-count="5">
+<a href="{{tb.href}}" aria-label="{{tb.n}}" title="{{tb.n}}" style="{{tb.style}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{tb.d}}"></path></svg><sc-if value="{{tb.dot}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 8px; right: 12px; width: 8px; height: 8px; border-radius: 999px; background: #D4FF3A; box-shadow: 0 0 0 2px #0E0E0E"></span></sc-if></a>
+</sc-for>
+</nav>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { off: {}, alert: false }; }
+  renderVals() {
+    var self = this;
+    var tabBase = 'position:relative;display:flex;align-items:center;justify-content:center;width:56px;height:48px;border-radius:999px;';
+    var nav = [
+      ['Home', 'M3 11 12 3l9 8v10h-6v-6H9v6H3z', 'Home-375-EN.dc.html', false],
+      ['Drops', 'M4 6h16v15H4zM4 10h16M8 3v4M16 3v4', 'Drops-375-EN.dc.html', true],
+      ['Map', 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z', 'Map-375-EN.dc.html', false],
+      ['Saved', 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z', 'Saved-375-EN.dc.html', false],
+      ['Alerts', 'M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4', 'Alerts-375-EN.dc.html', true]
+    ].map(function (t, k) { return { n: t[0], d: t[1], href: t[2], dot: t[3], style: tabBase + (k === 0 ? 'background:#D4FF3A;color:#0E0E0E' : 'color:#A3A39B') }; });
+    var CH = [
+      ['sort', 'New', 'M7 4v16M3 16l4 4 4-4M14 6h7M14 11h5M14 16h3'],
+      ['size', 'M · L', 'M4 7h16M4 7v10M20 7v10M8 7v3M12 7v4M16 7v3'],
+      ['price', '≤ 300 ₾', 'M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z'],
+      ['near', '≤ 3 km', 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z']
+    ];
+    var chips = CH.map(function (c) {
+      var on = !self.state.off[c[0]];
+      return { label: c[1], icon: c[2], on: on ? 'true' : 'false',
+        toggle: function () { var o = Object.assign({}, self.state.off); o[c[0]] = on; self.setState({ off: o }); },
+        style: 'flex-shrink:0;display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 14px 0 12px;border-radius:999px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;' + (on ? 'border:1px solid #EDEDE8;background:#EDEDE8;color:#0E0E0E' : 'border:1px solid #2E2E2B;background:#171716;color:#A3A39B') };
+    });
+    var tones = ['#4A2F2A', '#3A332C', '#6B5A4C', '#1F2326', '#7A6E60', '#55443A'];
+    var raw = [
+      ['leather', ' jacket, 90s', 220, 'M', 'ძველი კარადა'],
+      ['leather', ' bag', 85, '—', 'ფარდული'],
+      ['leather', ' boots', 180, '38', 'Second Wind'],
+      ['leather', ' belt', 25, 'L', 'ძველი კარადა'],
+      ['leather', ' bomber', 290, 'L', 'Garage 41'],
+      ['leather', ' gloves', 30, 'M', 'Mezzanine 7']
+    ];
+    var al = self.state.alert;
+    return {
+      nav: nav, chips: chips, count: String(14 + Object.keys(self.state.off).filter(function (k) { return self.state.off[k]; }).length * 9),
+      items: raw.map(function (r, i) {
+        return { boost: i === 0, hit: r[0], rest: r[1], price: r[2] + ' ₾', size: r[3], shop: r[4],
+          photo: 'position:absolute;inset:0;background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + tones[i],
+          tagStyle: "position:absolute;left:8px;bottom:10px;display:inline-flex;align-items:center;gap:6px;padding:5px 9px 5px 7px;border-radius:3px;background:#EDEDE8;color:#0E0E0E;font-family:Archivo,sans-serif;font-weight:700;font-size:14px;line-height:1;transform:rotate(-3deg);transform-origin:left bottom;box-shadow:0 2px 0 rgba(0,0,0,.35)" };
+      }),
+      alertAria: al ? 'true' : 'false', alertFill: al ? 'currentColor' : 'none', alertText: al ? 'ALERT ON' : 'ALERT',
+      alertBtn: "display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.04em;cursor:pointer;" + (al ? 'border:0;background:#D4FF3A;color:#0E0E0E' : 'border:1px solid #2E2E2B;background:transparent;color:#EDEDE8'),
+      toggleAlert: function () { self.setState({ alert: !al }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

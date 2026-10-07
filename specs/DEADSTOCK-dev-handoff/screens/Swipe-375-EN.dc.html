@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swipe mode — mobile — EN</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease}
+.ds-btn:active{transform:scale(.88)}
+.ds-card-in{animation:ds-in .35s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ds-in{from{transform:scale(.94) translateY(12px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}.ds-card-in{animation:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 375px; height: 812px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px">
+<a href="Home-375-EN.dc.html" aria-label="Close" title="Close" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #EDEDE8"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg></a>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #D4FF3A">SWIPE · {{pos}}</span>
+<a href="Saved-375-EN.dc.html" title="Saved" aria-label="Saved" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 12px; border-radius: 999px; background: #171716; color: #EDEDE8; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700"><svg width="16" height="16" viewBox="0 0 24 24" fill="#D4FF3A" stroke="#D4FF3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>{{savedCount}}</a>
+</header>
+
+<div style="position: relative; flex: 1; margin: 6px 16px 0">
+<div aria-hidden="true" style="position: absolute; left: 12px; right: 12px; top: 14px; bottom: -10px; border-radius: 16px; background: #171716; transform: rotate(3deg)"></div>
+<div class="ds-card-in" style="position: relative; display: flex; flex-direction: column; overflow: hidden; border-radius: 16px; background: #171716; border: 1px solid #2E2E2B">
+<div style="position: relative; aspect-ratio: 4 / 5; {{cur.photo}}">
+<sc-if value="{{cur.hold}}" hint-placeholder-val="{{ false }}">
+<span title="On hold" role="img" aria-label="On hold" style="position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; display: flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12M7 2v4c0 3 5 4 5 6s-5 3-5 6v4M17 2v4c0 3-5 4-5 6s5 3 5 6v4"></path></svg></span>
+</sc-if>
+<span style="position: absolute; right: 12px; top: 12px; padding: 4px 10px; border-radius: 999px; background: rgba(14, 14, 14, 0.75); font-family: 'JetBrains Mono', monospace; font-size: 11px">1 / {{cur.photos}}</span>
+<span style="position: absolute; left: 14px; bottom: 16px; display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px 8px 11px; border-radius: 4px; background: #EDEDE8; color: #0E0E0E; font-size: 26px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4)"><span style="width: 7px; height: 7px; border-radius: 999px; background: #0E0E0E"></span>{{cur.price}}</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 16px">
+<span style="font-size: 18px; line-height: 24px; font-weight: 800">{{cur.t}}</span>
+<span style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #A3A39B">
+<span style="padding: 2px 8px; border: 1px solid #2E2E2B; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #EDEDE8">{{cur.s}}</span>
+<span style="width: 16px; height: 16px; border-radius: 999px; {{cur.avatar}}"></span>{{cur.shop}}</span>
+</div>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 22px; padding: 18px 0 34px">
+<button type="button" class="ds-btn" aria-label="Skip" title="Skip" onClick="{{skip}}" style="width: 64px; height: 64px; border: 2px solid #2E2E2B; border-radius: 999px; background: #0E0E0E; color: #EDEDE8; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg></button>
+<button type="button" class="ds-btn" aria-label="Save" title="Save" onClick="{{save}}" style="width: 80px; height: 80px; border: 0; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(212, 255, 58, 0.25)"><svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></button>
+<a href="https://www.instagram.com/" class="ds-btn" aria-label="DM" title="DM" style="width: 64px; height: 64px; border: 2px solid #2E2E2B; border-radius: 999px; background: #0E0E0E; color: #EDEDE8; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"></path><path d="M22 2 15 22l-4-9-9-4z"></path></svg></a>
+</div>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":375,"height":812}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { i: 0, saved: 3 }; }
+  renderVals() {
+    var self = this, st = this.state;
+    var deck = [
+      { t: 'Carhartt Detroit jacket', p: 310, s: 'L', sh: 'Garage 41', c: '#3A332C', a: '#8E9B6A', n: 4 },
+      { t: 'ზაფხულის კაბა', p: 35, s: 'M', sh: 'ფარდული', c: '#B9B0A2', a: '#B07A6E', n: 3 },
+      { t: 'Pepe Jeans leather jacket', p: 220, s: 'XS', sh: 'ძველი კარადა', c: '#4A2F2A', a: '#C9A27A', n: 5, hold: true },
+      { t: 'Dickies 874 work pants', p: 85, s: 'W34', sh: 'Second Wind', c: '#2F3B2E', a: '#6F8FA6', n: 2 }
+    ];
+    var k = st.i % deck.length;
+    var d = deck[k];
+    function next(save) { self.setState({ i: st.i + 1, saved: st.saved + (save ? 1 : 0) }); }
+    return {
+      pos: (k + 1) + '/' + deck.length,
+      savedCount: String(st.saved),
+      cur: { t: d.t, price: d.p + ' ₾', s: d.s, shop: d.sh, avatar: 'background:' + d.a, photos: String(d.n), hold: !!d.hold, photo: 'background:radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), ' + d.c },
+      skip: function () { next(false); },
+      save: function () { next(true); }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Dashboard — boost an item — desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; min-height: 1000px; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; gap: 24px; padding: 24px 48px; filter: blur(4px) brightness(.4)">
+<div style="height: 44px; border-bottom: 1px solid #2E2E2B"></div>
+<div style="height: 110px; border-radius: 12px; background: #171716"></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="height: 70px; border-radius: 8px; background: #171716"></div><div style="height: 70px; border-radius: 8px; background: #171716"></div><div style="height: 70px; border-radius: 8px; background: #171716"></div><div style="height: 70px; border-radius: 8px; background: #171716"></div></div>
+</div>
+<div role="dialog" aria-modal="true" aria-label="BOOST" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 520px; max-width: calc(100% - 32px); box-sizing: border-box; z-index: 10; display: flex; flex-direction: column; background: #171716; border: 1px solid #2E2E2B; border-radius: 22px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6)">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 20px 0 28px">
+<span style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: #D4FF3A"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>BOOST</span>
+<a href="Dash-1440.dc.html" aria-label="დახურვა" title="დახურვა" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #222220; color: #EDEDE8"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></a>
+</div>
+<main style="display: flex; flex-direction: column; gap: 24px; padding: 8px 28px 8px">
+
+<div style="display: flex; justify-content: center; padding: 8px 0">
+<div style="position: relative; width: 190px">
+<div style="position: relative; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; background: radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), #3A332C; box-shadow: 0 0 0 2px #D4FF3A, 0 0 40px rgba(212, 255, 58, 0.25)">
+<span style="position: absolute; left: 8px; top: 8px; display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px 3px 6px; border-radius: 3px; background: #D4FF3A; color: #0E0E0E; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.06em"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>BOOST</span>
+<span style="position: absolute; left: 8px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px 5px 7px; border-radius: 3px; background: #EDEDE8; color: #0E0E0E; font-size: 15px; font-weight: 800; transform: rotate(-3deg)"><span style="width: 5px; height: 5px; border-radius: 999px; background: #0E0E0E"></span>220 ₾</span>
+</div>
+<span style="display: block; margin-top: 10px; font-size: 14px; font-weight: 600">Pepe Jeans leather jacket</span>
+</div>
+</div>
+
+<sc-if value="{{setup}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">სად?</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{spots}}" as="p" hint-placeholder-count="3">
+<button type="button" aria-pressed="{{p.on}}" onClick="{{p.pick}}" style="{{p.style}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{p.icon}}"></path></svg><span>{{p.label}}</span></button>
+</sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">რამდენ ხანს?</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{durs}}" as="d" hint-placeholder-count="3">
+<button type="button" aria-pressed="{{d.on}}" onClick="{{d.pick}}" style="{{d.style}}"><span style="font-size: 18px; font-weight: 800">{{d.label}}</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; opacity: 0.8">{{d.price}}</span></button>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{live}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 16px; padding: 20px; border: 1px solid #D4FF3A; border-radius: 16px; background: rgba(212, 255, 58, 0.06)">
+<span style="display: flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #D4FF3A"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>LIVE · {{spotName}}</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 44px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums">{{left}}</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="3">
+<div title="{{s.label}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 12px; border-radius: 12px; background: #171716"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A3A39B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{s.icon}}"></path></svg><span style="font-weight: 900; font-stretch: 125%; font-size: 24px; letter-spacing: -0.03em">{{s.v}}</span></div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</main>
+<div style="display: flex; align-items: center; gap: 12px; padding: 16px 28px 24px">
+<sc-if value="{{setup}}" hint-placeholder-val="{{ true }}"><a href="Dash-Pay-1440.dc.html" class="ds-btn ds-p" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.04em; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>PAY {{total}}</a></sc-if>
+<sc-if value="{{live}}" hint-placeholder-val="{{ false }}"><a href="Dash-1440.dc.html" class="ds-btn ds-p" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.04em"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>OK</a></sc-if>
+</div>
+</div>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { spot: 0, dur: 1, live: false }; }
+  renderVals() {
+    var self = this, s = this.state;
+    var SP = [['FEED', 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z'], ['SEARCH', 'M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14zM20 20l-3.5-3.5'], ['MAP', 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z']];
+    var DU = [['24სთ', '3 ₾', '23:59:41'], ['3დ', '7 ₾', '71:59:41'], ['7დ', '12 ₾', '167:59:41']];
+    var tile = 'display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;height:76px;border-radius:14px;font-family:inherit;cursor:pointer;';
+    function on(a) { return a ? 'border:0;background:#D4FF3A;color:#0E0E0E' : 'border:1px solid #2E2E2B;background:transparent;color:#EDEDE8'; }
+    return {
+      setup: !s.live, live: s.live,
+      spots: SP.map(function (p, i) { var a = s.spot === i; return { label: p[0], icon: p[1], on: a ? 'true' : 'false', pick: function () { self.setState({ spot: i }); }, style: tile + "font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.06em;" + on(a) }; }),
+      durs: DU.map(function (d, i) { var a = s.dur === i; return { label: d[0], price: d[1], on: a ? 'true' : 'false', pick: function () { self.setState({ dur: i }); }, style: tile + on(a) }; }),
+      total: DU[s.dur][1], left: DU[s.dur][2], spotName: SP[s.spot][0],
+      pay: function () { self.setState({ live: true }); },
+      stats: [['ნახვა', '128', 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z'], ['შენახვა', '14', 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z'], ['DM', '5', 'M22 2 11 13M22 2 15 22l-4-9-9-4z']].map(function (x) { return { label: x[0], v: x[1], icon: x[2] }; })
+    };
+  }
+}
+</script>
+</body>
+</html>

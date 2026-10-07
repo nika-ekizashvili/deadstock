@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Shop weekly stats story</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.18;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 360px; height: 640px; display: flex; flex-direction: column; background: #D4FF3A; color: #0E0E0E; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<div style="padding: 40px 28px 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.14em">WEEK 41 · ON DEADSTOCK</span>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 52px; height: 52px; border-radius: 999px; background: #C9A27A; box-shadow: 0 0 0 3px #D4FF3A, 0 0 0 5px #0E0E0E"></span>
+<span style="font-family: 'Noto Sans Georgian', sans-serif; font-size: 26px; font-weight: 800">ძველი კარადა</span>
+</div>
+</div>
+
+<div style="margin-top: 26px; padding: 0 28px; display: flex; flex-direction: column">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="3">
+<div style="display: flex; align-items: center; gap: 14px; padding: 12px 0; border-top: 2px solid #0E0E0E">
+<span style="width: 40px; height: 40px; border-radius: 999px; background: #0E0E0E; color: #D4FF3A; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{s.d}}"></path></svg></span>
+<span style="font-weight: 900; font-stretch: 125%; font-size: 44px; line-height: 1; letter-spacing: -0.04em">{{s.v}}</span>
+<span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.08em">{{s.k}}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="margin-top: auto; background: #0E0E0E; color: #EDEDE8; padding: 22px 28px 40px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #D4FF3A">MOST SAVED</span>
+<div style="display: flex; align-items: center; gap: 14px">
+<span style="position: relative; flex-shrink: 0; width: 76px; height: 95px; border-radius: 4px; background: radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%), #4A2F2A"><span style="position: absolute; left: 5px; bottom: 6px; padding: 3px 6px; border-radius: 2px; background: #EDEDE8; color: #0E0E0E; font-size: 12px; font-weight: 700; transform: rotate(-3deg)">220 ₾</span></span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 17px; font-weight: 800">Pepe Jeans leather jacket</span>
+<span style="display: flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A3A39B"><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4FF3A" stroke="#D4FF3A" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>24</span>
+</div>
+</div>
+</div>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":640}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      stats: [
+        { d: 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z', v: '1.2K', k: 'VIEWS' },
+        { d: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z', v: '86', k: 'SAVES' },
+        { d: 'M22 2 11 13M22 2 15 22l-4-9-9-4z', v: '41', k: 'DM TAPS' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

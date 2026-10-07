@@ -1,0 +1,91 @@
+/* SignIn-375 / SignIn-1440. Mobile first; desktop from 900px. */
+
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header { border-bottom: 1px solid var(--ds-line); }
+.headerInner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; }
+@media (min-width: 900px) {
+  .headerInner { max-width: var(--ds-container); margin: 0 auto; padding: 18px 48px; gap: 16px; }
+  /* SignIn-1440 wordmark is 22px / .ge 11px (smaller than the shopper header's) */
+  .logo :global(.ds-logo__mark) { font-size: 22px; }
+  .logo :global(.ds-logo__tld) { font-size: 11px; }
+}
+
+.main { display: flex; flex-direction: column; }
+
+/* decorative tiles */
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 24px 16px 0; }
+.tile {
+  position: relative; aspect-ratio: 4 / 5; border-radius: 4px;
+  background: var(--tone); opacity: 0.55;
+}
+.tile:nth-child(2) {
+  margin-top: 18px; opacity: 1;
+  background: radial-gradient(120% 90% at 28% 18%, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 60%), var(--tone);
+}
+@media (max-width: 899.98px) { .tile:nth-child(n + 4) { display: none; } }
+.tag {
+  position: absolute; left: 6px; bottom: 8px;
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px 4px 6px; border-radius: 3px;
+  background: var(--ds-text); color: var(--ds-bg);
+  font-size: 12px; font-weight: 700; line-height: 1; white-space: nowrap;
+  transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+.tag::before { content: ""; width: 4px; height: 4px; border-radius: 999px; background: var(--ds-bg); }
+
+/* copy column */
+.copy { display: flex; flex-direction: column; gap: 22px; padding: 28px 16px 48px; }
+.kicker {
+  font-family: var(--ds-font-mono); font-size: 11px; line-height: 16px; font-weight: 500;
+  letter-spacing: 0.1em; color: var(--ds-lime);
+}
+.h1 { margin: 0; font-family: var(--ds-font-geo); font-size: 30px; line-height: 38px; font-weight: 800; }
+.lime { color: var(--ds-lime); }
+.info {
+  display: flex; gap: 10px; padding: 14px 16px;
+  border: 1px solid var(--ds-line); border-radius: 12px; background: var(--ds-surface);
+  font-size: 14px; line-height: 21px;
+}
+.infoIcon { flex-shrink: 0; margin-top: 2px; color: var(--ds-muted); }
+.actions { display: flex; flex-direction: column; gap: 12px; }
+.connect {
+  display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px;
+  border-radius: 999px; background: var(--ds-lime); color: var(--ds-on-lime);
+  text-decoration: none; font-size: 16px; font-weight: 700;
+}
+.connect:hover { color: var(--ds-on-lime); }
+.error {
+  margin: 0; display: flex; gap: 10px; padding: 12px 14px;
+  border: 1px solid var(--ds-error); border-radius: 12px; color: var(--ds-error);
+  font-size: 14px; line-height: 21px;
+}
+.errIcon { flex-shrink: 0; margin-top: 1px; }
+.back { display: flex; align-items: center; min-height: 44px; font-size: 14px; text-decoration: none; color: var(--ds-muted); }
+.back:hover { color: var(--ds-text); }
+
+@media (min-width: 900px) {
+  .main {
+    flex: 1; width: 100%; max-width: var(--ds-container); margin: 0 auto; padding: 80px 48px;
+    flex-direction: row; flex-wrap: wrap; align-items: center; gap: 80px;
+  }
+  .copy { order: 0; flex: 1 1 440px; max-width: 520px; gap: 28px; padding: 0; }
+  .tiles { order: 1; flex: 1 1 480px; min-width: 0; gap: 12px; padding: 0; }
+  .tile, .tile:nth-child(2) {
+    display: block; margin-top: 0;
+    background: radial-gradient(120% 90% at 28% 18%, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 60%), var(--tone);
+    transition: transform 0.6s var(--ds-ease-out);
+  }
+  .tile:nth-child(odd) { opacity: 0.55; }
+  .tile:nth-child(even) { opacity: 1; }
+  .tile:nth-child(3n + 2) { margin-top: 32px; }
+  .tiles:hover .tile { transform: translateY(-6px); }
+  .tag { left: 10px; bottom: 12px; gap: 7px; padding: 6px 11px 6px 8px; font-size: 16px; }
+  .tag::before { width: 6px; height: 6px; }
+  .kicker { font-size: 12px; }
+  .h1 { font-size: 52px; line-height: 62px; }
+  .info { gap: 12px; padding: 16px 18px; font-size: 15px; line-height: 23px; }
+  .infoIcon { width: 20px; height: 20px; }
+  .actions { gap: 14px; }
+  .connect { font-size: 17px; }
+  .back { align-self: flex-start; min-height: 0; }
+}

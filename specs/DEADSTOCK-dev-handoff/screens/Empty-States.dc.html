@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Empty states — saved, alerts, drops</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+input::placeholder{color:#6E6E68}
+@media (prefers-reduced-motion:reduce){.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 1357px; height: 860px; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+<div style="display: flex; gap: 40px; padding: 48px 56px"><div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #A3A39B">SAVED · EMPTY</span>
+<div style="position: relative; width: 375px; height: 700px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 18px; padding: 0 28px; box-sizing: border-box; border: 1px solid #2E2E2B; border-radius: 20px; overflow: hidden; isolation: isolate">
+<span aria-hidden="true" style="position: absolute; right: -40px; top: 60px; z-index: -1; color: #1A1A19"><svg width="300" height="300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></span>
+<span style="width: 64px; height: 64px; border-radius: 999px; border: 2px dashed #D4FF3A; color: #D4FF3A; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></span>
+<span style="font-size: 30px; line-height: 36px; font-weight: 800">ჯერ ცარიელია.</span>
+<span style="font-size: 15px; line-height: 22px; color: #A3A39B"></span>
+
+<a href="Home-375.dc.html" class="ds-btn ds-p" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.04em">BROWSE<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div><div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #A3A39B">ALERTS · EMPTY</span>
+<div style="position: relative; width: 375px; height: 700px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 18px; padding: 0 28px; box-sizing: border-box; border: 1px solid #2E2E2B; border-radius: 20px; overflow: hidden; isolation: isolate">
+<span aria-hidden="true" style="position: absolute; right: -40px; top: 60px; z-index: -1; color: #1A1A19"><svg width="300" height="300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"></path></svg></span>
+<span style="width: 64px; height: 64px; border-radius: 999px; border: 2px dashed #D4FF3A; color: #D4FF3A; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"></path></svg></span>
+<span style="font-size: 30px; line-height: 36px; font-weight: 800">სიჩუმეა.</span>
+<span style="font-size: 15px; line-height: 22px; color: #A3A39B"></span>
+
+<a href="Search-375.dc.html" class="ds-btn ds-p" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.04em">FIND SHOPS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div><div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #A3A39B">DROPS · NONE THIS WEEK</span>
+<div style="position: relative; width: 375px; height: 700px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 18px; padding: 0 28px; box-sizing: border-box; border: 1px solid #2E2E2B; border-radius: 20px; overflow: hidden; isolation: isolate">
+<span aria-hidden="true" style="position: absolute; right: -40px; top: 60px; z-index: -1; color: #1A1A19"><svg width="300" height="300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v15H4zM4 10h16M8 3v4M16 3v4"></path></svg></span>
+<span style="width: 64px; height: 64px; border-radius: 999px; border: 2px dashed #D4FF3A; color: #D4FF3A; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v15H4zM4 10h16M8 3v4M16 3v4"></path></svg></span>
+<span style="font-size: 30px; line-height: 36px; font-weight: 800">ამ კვირას დროპი არაა.</span>
+<span style="font-size: 15px; line-height: 22px; color: #A3A39B"></span>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid #2E2E2B; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A3A39B">LAST · DEADSTOCK THURSDAY · 6 SHOPS</span>
+<a href="Notif-375.dc.html" class="ds-btn ds-p" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; border-radius: 999px; background: #D4FF3A; color: #0E0E0E; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.04em">ALERT ME<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div></div>
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1357,"height":860}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

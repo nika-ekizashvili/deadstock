@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Alerts — desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#D4FF3A}a:hover{color:#EAFF8F}
+:focus-visible{outline:2px solid #D4FF3A !important;outline-offset:3px}
+.ds-card .ds-ph{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ds-card:hover .ds-ph{transform:scale(1.05)}
+.ds-card:hover .ds-t{text-decoration:underline;text-underline-offset:3px}
+.ds-card .ds-tag{transition:transform .25s ease}
+.ds-card:hover .ds-tag{transform:rotate(0deg) translateY(-2px) !important}
+.ds-btn{transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.ds-btn:active{transform:scale(.97)}
+.ds-p:hover{background:#E6FF80 !important}
+.ds-s:hover{border-color:#EDEDE8 !important;background:#222220 !important}
+.ds-chip:hover{border-color:#6E6E68 !important}
+.ds-marquee{animation:ds-marquee 60s linear infinite}
+.ds-tick:hover .ds-marquee{animation-play-state:paused}
+@keyframes ds-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ds-sk{animation:ds-pulse 1.4s ease-in-out infinite}
+@keyframes ds-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+@media (prefers-reduced-motion:reduce){.ds-marquee,.ds-sk{animation:none}.ds-card .ds-ph,.ds-card .ds-tag,.ds-btn{transition:none}}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.22;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; min-height: 1200px; overflow: hidden; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<header style="border-bottom: 1px solid #2E2E2B">
+<div style="max-width: 1440px; margin: 0 auto; padding: 16px 48px; box-sizing: border-box; display: flex; align-items: center; gap: 32px">
+<a href="Home-1440.dc.html" aria-label="DEADSTOCK — მთავარი" style="flex-shrink: 0; display: flex; align-items: flex-start; gap: 3px; color: #EDEDE8; text-decoration: none">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 26px; line-height: 1; letter-spacing: -0.04em">DEADSTOCK</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; color: #D4FF3A">.ge</span>
+</a>
+<label style="flex: 1 1 auto; max-width: 640px; display: flex; align-items: center; gap: 12px; height: 52px; padding: 0 22px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A3A39B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+<input type="search" aria-label="ძებნა — ქართულად ან ლათინურად" placeholder="რას ეძებ?" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #EDEDE8; font-family: inherit; font-size: 16px"><a href="Search-1440.dc.html" aria-label="ძებნა" title="ძებნა" class="ds-btn" style="flex-shrink: 0; width: 36px; height: 36px; margin-right: -10px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #D4FF3A; color: #0E0E0E"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</label>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px">
+<nav aria-label="მენიუ" style="display: flex; align-items: center; gap: 4px">
+<a href="Drops-1440.dc.html" aria-label="დროპები" title="დროპები" style="position: relative; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v15H4zM4 10h16M8 3v4M16 3v4"></path></svg><span style="position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; border-radius: 999px; background: #D4FF3A; box-shadow: 0 0 0 2px #0E0E0E"></span></a>
+<a href="Map-1440.dc.html" aria-label="რუკა" title="რუკა" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></a>
+<a href="Saved-1440.dc.html" aria-label="შენახული" title="შენახული" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 12px; border-radius: 999px; color: #EDEDE8; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700"><svg width="20" height="20" viewBox="0 0 24 24" fill="#D4FF3A" stroke="#D4FF3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>{{savedN}}</a>
+<a href="Alerts-1440.dc.html" aria-label="ალერტები" title="ალერტები" style="position: relative; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 21h4"></path></svg><span style="position: absolute; top: 8px; right: 9px; width: 8px; height: 8px; border-radius: 999px; background: #D4FF3A; box-shadow: 0 0 0 2px #0E0E0E"></span></a>
+<a href="Me-1440.dc.html" aria-label="მე" title="მე" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; color: #EDEDE8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></a>
+</nav>
+<a href="SignIn-1440.dc.html" class="ds-btn ds-s" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #2E2E2B; border-radius: 999px; color: #EDEDE8; text-decoration: none; font-size: 15px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.5-5h-13z"></path><path d="M5 9v11h14V9"></path><path d="M10 20v-6h4v6"></path></svg>
+გაყიდე</a>
+<div role="group" aria-label="ენა / Language" style="display: flex; padding: 3px; background: #171716; border: 1px solid #2E2E2B; border-radius: 999px">
+<button type="button" aria-pressed="true" style="height: 36px; min-width: 52px; padding: 0 12px; border: 0; border-radius: 999px; background: #EDEDE8; color: #0E0E0E; font-family: inherit; font-size: 13px; font-weight: 700">ქარ</button>
+<a href="Alerts-1440-EN.dc.html" aria-pressed="false" style="display: inline-flex; align-items: center; justify-content: center; height: 36px; min-width: 52px; padding: 0 12px; border-radius: 999px; color: #A3A39B; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500">ENG</a>
+</div>
+</div>
+</div>
+</header>
+<main style="max-width: 1440px; margin: 0 auto; padding: 40px 48px 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<h1 style="display: flex; align-items: center; gap: 14px; margin: 0; font-family: 'Noto Sans Georgian', 'Archivo', sans-serif; font-size: 44px; line-height: 1; font-weight: 800"><span style="color: #D4FF3A"><svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"></path></svg></span>ალერტები<span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 500; color: #A3A39B">{{activeCount}} ON</span></h1>
+<a href="Notif-1440.dc.html" class="ds-btn ds-s" style="display: inline-flex; align-items: center; gap: 10px; height: 46px; padding: 0 18px; border: 1px solid #2E2E2B; border-radius: 999px; color: #EDEDE8; text-decoration: none; font-size: 14px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"></path><circle cx="16" cy="6" r="2"></circle><circle cx="10" cy="12" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg>Push · Telegram</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: start">
+
+<section style="display: flex; flex-direction: column; gap: 22px; padding: 24px; border: 1px solid #2E2E2B; border-radius: 18px">
+<h2 style="display: flex; align-items: center; gap: 10px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">MY SIZES</h2>
+<sc-for list="{{sizeGroups}}" as="g" hint-placeholder-count="3">
+<div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap">
+<span title="{{g.title}}" style="flex-shrink: 0; width: 32px; color: #A3A39B; display: flex; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{g.icon}}"></path></svg></span>
+<sc-for list="{{g.sizes}}" as="s" hint-placeholder-count="5"><button type="button" class="ds-btn" aria-pressed="{{s.on}}" onClick="{{s.toggle}}" style="{{s.style}}">{{s.v}}</button></sc-for>
+</div>
+</sc-for>
+<h2 style="display: flex; align-items: center; gap: 10px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B; padding-top: 18px; border-top: 1px solid #2E2E2B">SEARCHES</h2>
+<sc-for list="{{searches}}" as="a" hint-placeholder-count="3">
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 10px 10px 16px; border-radius: 14px; background: #171716">
+<div style="flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px"><span style="font-size: 16px; font-weight: 700">{{a.q}}</span><sc-for list="{{a.tags}}" as="t" hint-placeholder-count="2"><span style="padding: 2px 8px; border: 1px solid #2E2E2B; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A3A39B">{{t}}</span></sc-for></div>
+<button type="button" class="ds-btn" aria-label="ალერტი" title="ალერტი" aria-pressed="{{a.on}}" onClick="{{a.toggle}}" style="{{a.style}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="{{a.fill}}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"></path></svg></button>
+</div>
+</sc-for>
+<label style="display: flex; align-items: center; gap: 10px; height: 50px; padding: 0 16px; border: 1px dashed #2E2E2B; border-radius: 14px"><span style="color: #D4FF3A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><input type="text" aria-label="ახალი ალერტი" placeholder="levis 501, kaba…" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #EDEDE8; font-family: inherit; font-size: 15px"></label>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 14px; padding: 24px; border: 1px solid #2E2E2B; border-radius: 18px">
+<h2 style="display: flex; align-items: center; gap: 10px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B">SHOPS</h2>
+<sc-for list="{{shops}}" as="sh" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 14px; padding: 6px 0">
+<span style="width: 48px; height: 48px; border-radius: 999px; {{sh.avatar}}"></span>
+<a href="Shop-1440.dc.html" style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; color: #EDEDE8; text-decoration: none"><span style="font-size: 16px; font-weight: 700">{{sh.n}}</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A3A39B">{{sh.next}}</span></a>
+<button type="button" class="ds-btn" aria-label="ალერტი" title="ალერტი" aria-pressed="{{sh.on}}" onClick="{{sh.toggle}}" style="{{sh.style}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="{{sh.fill}}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"></path></svg></button>
+</div>
+</sc-for>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border: 1px solid #2E2E2B; border-radius: 18px">
+<h2 style="display: flex; align-items: center; gap: 10px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #A3A39B"><span style="width: 8px; height: 8px; border-radius: 999px; background: #D4FF3A"></span>LATEST</h2>
+<sc-for list="{{feed}}" as="f" hint-placeholder-count="4">
+<a href="Item-1440.dc.html" style="display: flex; align-items: center; gap: 14px; padding: 10px; border-radius: 14px; background: #171716; color: #EDEDE8; text-decoration: none">
+<span style="flex-shrink: 0; width: 56px; height: 70px; border-radius: 4px; {{f.photo}}"></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 800">{{f.t}}</span><span style="font-size: 13px; color: #A3A39B">{{f.why}}</span></div>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A3A39B">{{f.ago}}</span>
+</a>
+</sc-for>
+</section>
+</div>
+</main>
+<footer style="border-top: 1px solid #2E2E2B">
+<div style="max-width: 1440px; margin: 0 auto; padding: 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 64px; line-height: 0.85; letter-spacing: -0.04em; color: #222220">DEADSTOCK</span>
+<a href="SignIn-1440.dc.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; text-decoration: none">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.5-5h-13z"></path><path d="M5 9v11h14V9"></path><path d="M10 20v-6h4v6"></path></svg>
+გაყიდე →</a>
+</div>
+</footer>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { sz: { 'S': 1, 'M': 1, 'W32': 1, '42': 1 }, s: { 0: 1, 1: 1 }, sh: { 0: 1, 2: 1 } }; }
+  renderVals() {
+    var self = this, st = this.state;
+    function flip(key, k) { var o = Object.assign({}, st[key]); o[k] = !o[k]; var p = {}; p[key] = o; self.setState(p); }
+    var chipOn = "height:40px;min-width:48px;padding:0 12px;border:1px solid #D4FF3A;border-radius:999px;background:#D4FF3A;color:#0E0E0E;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;cursor:pointer";
+    var chipOff = "height:40px;min-width:48px;padding:0 12px;border:1px solid #2E2E2B;border-radius:999px;background:#171716;color:#A3A39B;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;cursor:pointer";
+    function bell(on) { return 'flex-shrink:0;width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;cursor:pointer;' + (on ? 'border:0;background:#D4FF3A;color:#0E0E0E' : 'border:1px solid #2E2E2B;background:transparent;color:#A3A39B'); }
+    var groups = [
+      { title: 'ზედა', icon: 'M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3c0 2-2 3-4 3S8 5 8 3z', sizes: ['XS', 'S', 'M', 'L', 'XL'] },
+      { title: 'შარვალი', icon: 'M6 3h12l1 18h-5l-2-11-2 11H5zM6 7h12', sizes: ['W28', 'W30', 'W32', 'W34'] },
+      { title: 'ფეხსაცმელი', icon: 'M3 18v-5l5-6 3 3 3-1 7 6v3zM3 18h18', sizes: ['39', '40', '41', '42', '43'] }
+    ].map(function (g) { return { title: g.title, icon: g.icon, sizes: g.sizes.map(function (v) { var on = !!st.sz[v]; return { v: v, on: on ? 'true' : 'false', style: on ? chipOn : chipOff, toggle: function () { flip('sz', v); } }; }) }; });
+    var searches = [{ q: 'Carhartt', tags: ['L', '≤ 200 ₾'] }, { q: 'kaba', tags: ['M'] }, { q: 'Dr. Martens', tags: ['39'] }].map(function (a, i) { var on = !!st.s[i]; return { q: a.q, tags: a.tags, on: on ? 'true' : 'false', fill: on ? 'currentColor' : 'none', style: bell(on), toggle: function () { flip('s', i); } }; });
+    var shops = [{ n: 'ძველი კარადა', c: '#C9A27A', next: 'DROP · ორშ 20:00' }, { n: 'Second Wind', c: '#6F8FA6', next: '3 ახალი დღეს' }, { n: 'Garage 41', c: '#8E9B6A', next: 'DROP · ხუთ 19:00' }, { n: 'ფარდული', c: '#B07A6E', next: '2 დ' }].map(function (x, i) { var on = !!st.sh[i]; return { n: x.n, next: x.next, avatar: 'background:' + x.c, on: on ? 'true' : 'false', fill: on ? 'currentColor' : 'none', style: bell(on), toggle: function () { flip('sh', i); } }; });
+    var active = Object.keys(st.s).filter(function (k) { return st.s[k]; }).length + Object.keys(st.sh).filter(function (k) { return st.sh[k]; }).length;
+    var feed = [
+      { t: 'Carhartt Detroit · L · 180 ₾', why: 'Carhartt · L · ≤ 200 ₾', ago: '2წთ', c: '#3A332C' },
+      { t: 'ზაფხულის კაბა · M · 35 ₾', why: 'kaba · M', ago: '1სთ', c: '#B9B0A2' },
+      { t: 'Nike Air Max 95 · 42 · ↓40', why: 'შენახული · ფასი დაიკლო', ago: '3სთ', c: '#2C363B' },
+      { t: 'ძველი კარადა · 12 ახალი', why: 'DROP', ago: 'გუშ', c: '#C9A27A' }
+    ].map(function (f) { return { t: f.t, why: f.why, ago: f.ago, photo: 'background:' + f.c }; });
+    return { savedN: '3', sizeGroups: groups, searches: searches, shops: shops, feed: feed, activeCount: String(active) };
+  }
+}
+</script>
+</body>
+</html>

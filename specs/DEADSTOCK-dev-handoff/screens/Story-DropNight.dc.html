@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>Story — DEADSTOCK Thursday</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&amp;display=swap">
+<style>
+body{margin:0;background:#0E0E0E}
+.ds-grained::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:0.2;mix-blend-mode:overlay;filter:url(#ds-grain)}
+</style>
+</helmet>
+<div class="ds-grained" style="position: relative; overflow: hidden; width: 360px; height: 640px; display: flex; flex-direction: column; background: #0E0E0E; color: #EDEDE8; font-family: 'Archivo', 'Noto Sans Georgian', system-ui, sans-serif">
+
+<div style="position: relative; height: 330px; background: #D4FF3A; color: #0E0E0E; overflow: hidden">
+<span style="position: absolute; left: 24px; top: 40px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.14em">COMMUNITY DROP · 6 SHOPS</span>
+<div style="position: absolute; left: 20px; top: 74px; font-weight: 900; font-stretch: 125%; font-size: 70px; line-height: 0.86; letter-spacing: -0.06em">DEAD<br>STOCK<br>THURS<br>DAY</div>
+<span style="position: absolute; right: -30px; bottom: 26px; padding: 10px 40px; background: #0E0E0E; color: #D4FF3A; font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; transform: rotate(-8deg)">ხუთ · 20:00</span>
+</div>
+
+<div style="padding: 28px 24px 0; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A3A39B">ONE NIGHT · ALL NEW</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 10px">
+<sc-for list="{{shops}}" as="s" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="{{s.style}}"></span>
+<span style="font-size: 11px; font-weight: 700; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%">{{s.n}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="margin-top: auto; margin-bottom: 36px; align-self: center; display: flex; align-items: center; justify-content: center; width: 220px; height: 52px; border: 2px dashed #2E2E2B; border-radius: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #6E6E68">REMINDER STICKER</div>
+
+<svg aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden"><filter id="ds-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":640}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var s = [['ძველი კარადა', '#C9A27A'], ['Second Wind', '#6F8FA6'], ['Garage 41', '#8E9B6A'], ['ფარდული', '#B07A6E'], ['Mezzanine 7', '#9A8FB0'], ['Vinyl Basement', '#5E7D6A']];
+    return { shops: s.map(function (x) { return { n: x[0], style: 'width:56px;height:56px;border-radius:999px;background:' + x[1] + ';box-shadow:0 0 0 3px #0E0E0E,0 0 0 5px #D4FF3A' }; }) };
+  }
+}
+</script>
+</body>
+</html>
